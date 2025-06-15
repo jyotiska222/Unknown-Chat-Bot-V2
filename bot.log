@@ -1,0 +1,920 @@
+2025-06-15 09:09:05,871 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:09:37,162 - bot.utils - ERROR - Request error: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)
+2025-06-15 09:10:09,280 - bot.utils - ERROR - Request error: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=30)
+2025-06-15 09:10:46,002 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:11:25,960 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:12:01,097 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749958921.0781963, 'wait_start': 1749957891.2923758}
+2025-06-15 09:12:31,132 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749958951.1178293, 'wait_start': 1749957891.2923758}
+2025-06-15 09:12:46,483 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749958966.4670296, 'wait_start': 1749958480.2331686}
+2025-06-15 09:14:27,743 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:14:34,378 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749959074.3608744, 'wait_start': 1749958480.2331686}
+2025-06-15 09:14:34,380 - bot.handlers - INFO - Finding partner for user 2023022792 (M, interested in F)
+2025-06-15 09:14:34,380 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749958951.1178293, 'wait_start': 1749957891.2923758}, '2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749959074.3608744, 'wait_start': 1749958480.2331686}}
+2025-06-15 09:14:34,380 - bot.handlers - INFO - User 6261300717 not compatible: their gender M, interest F
+2025-06-15 09:14:49,059 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749959089.0424418, 'wait_start': 1749958480.2331686}
+2025-06-15 09:14:49,060 - bot.handlers - INFO - Finding partner for user 2023022792 (M, interested in F)
+2025-06-15 09:14:49,061 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749958951.1178293, 'wait_start': 1749957891.2923758}, '2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749959089.0424418, 'wait_start': 1749958480.2331686}}
+2025-06-15 09:14:49,061 - bot.handlers - INFO - User 6261300717 not compatible: their gender M, interest F
+2025-06-15 09:18:30,760 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:18:49,121 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749959329.107018, 'wait_start': 1749957891.2923758}
+2025-06-15 09:18:49,123 - bot.handlers - INFO - Finding partner for user 6261300717
+2025-06-15 09:18:49,123 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749959329.107018, 'wait_start': 1749957891.2923758}, '2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749959089.0424418, 'wait_start': 1749958480.2331686}}
+2025-06-15 09:18:49,123 - bot.handlers - INFO - Found random partner: 2023022792
+2025-06-15 09:20:20,636 - __main__ - ERROR - Too many consecutive errors, sleeping for longer...
+2025-06-15 09:22:26,788 - __main__ - ERROR - Too many consecutive errors, sleeping for longer...
+2025-06-15 09:25:49,146 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:27:08,142 - __main__ - ERROR - Too many consecutive errors, sleeping for longer...
+2025-06-15 09:28:15,754 - __main__ - ERROR - Too many consecutive errors, sleeping for longer...
+2025-06-15 09:29:23,346 - __main__ - ERROR - Too many consecutive errors, sleeping for longer...
+2025-06-15 09:30:30,970 - __main__ - ERROR - Too many consecutive errors, sleeping for longer...
+2025-06-15 09:31:38,599 - __main__ - ERROR - Too many consecutive errors, sleeping for longer...
+2025-06-15 09:32:46,224 - __main__ - ERROR - Too many consecutive errors, sleeping for longer...
+2025-06-15 09:32:51,990 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:33:08,552 - bot.handlers - ERROR - Error handling message: 'TelegramAPI' object has no attribute 'send_voice'
+2025-06-15 09:33:19,931 - bot.handlers - ERROR - Error handling message: 'TelegramAPI' object has no attribute 'send_voice'
+2025-06-15 09:33:26,736 - bot.handlers - ERROR - Error handling message: 'TelegramAPI' object has no attribute 'send_photo'
+2025-06-15 09:35:17,868 - bot.handlers - ERROR - Error handling message: 'TelegramAPI' object has no attribute 'send_photo'
+2025-06-15 09:35:35,570 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:35:42,222 - bot.handlers - INFO - Sending photo from 6261300717 to 2023022792, file_id: AgACAgUAAxkBAAJoj2hORg6DeufbZnyx3M6Ux_y9D1e7AAIiwTEbnmNwVk2XvntVRkrwAQADAgADeQADNgQ
+2025-06-15 09:37:38,646 - bot.handlers - INFO - Sending photo from 6261300717 to 2023022792, file_id: AgACAgUAAxkBAAJoj2hORg6DeufbZnyx3M6Ux_y9D1e7AAIiwTEbnmNwVk2XvntVRkrwAQADAgADeQADNgQ
+2025-06-15 09:38:41,130 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:39:18,007 - bot.handlers - INFO - Sending photo from 2023022792 to 6261300717, file_id: AgACAgUAAxkBAAJol2hOR20Dairxl5d1hsCgBxK_N4czAAKKyzEbyN5wVhxhXJqMDoVPAQADAgADeAADNgQ
+2025-06-15 09:41:00,546 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:41:16,051 - bot.handlers - INFO - Sending photo from 2023022792 to 6261300717, file_id: AgACAgUAAxkBAAJol2hOR20Dairxl5d1hsCgBxK_N4czAAKKyzEbyN5wVhxhXJqMDoVPAQADAgADeAADNgQ
+2025-06-15 09:44:45,615 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:45:48,547 - app - ERROR - Exception on /admin/dashboard [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 33, in dashboard
+    return render_template('admin/dashboard.html', stats=stats)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin/dashboard.html
+2025-06-15 09:46:01,146 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:46:05,369 - app - ERROR - Exception on /admin/dashboard [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 33, in dashboard
+    return render_template('admin/dashboard.html', stats=stats)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin/dashboard.html
+2025-06-15 09:46:10,708 - app - ERROR - Exception on /admin/dashboard [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 33, in dashboard
+    return render_template('admin/dashboard.html', stats=stats)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin/dashboard.html
+2025-06-15 09:46:15,902 - app - ERROR - Exception on /admin/dashboard [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 33, in dashboard
+    return render_template('admin/dashboard.html', stats=stats)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin/dashboard.html
+2025-06-15 09:47:24,999 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:47:33,960 - app - ERROR - Exception on /admin/users [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 40, in users
+    return render_template('admin/users.html', users=users)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\templates\admin\users.html", line 62, in template
+    <td>{{ user.joined_at|datetime }}</td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: No filter named 'datetime'.
+2025-06-15 09:47:39,258 - app - ERROR - Exception on /admin/broadcast [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 72, in broadcast
+    return render_template('admin/broadcast.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\templates\admin\broadcast.html", line 58, in template
+    <small>{{ broadcast.timestamp|datetime }}</small>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: No filter named 'datetime'.
+2025-06-15 09:47:43,249 - app - ERROR - Exception on /admin/users [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 40, in users
+    return render_template('admin/users.html', users=users)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\templates\admin\users.html", line 62, in template
+    <td>{{ user.joined_at|datetime }}</td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: No filter named 'datetime'.
+2025-06-15 09:47:53,894 - app - ERROR - Exception on /admin/users [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 40, in users
+    return render_template('admin/users.html', users=users)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\templates\admin\users.html", line 62, in template
+    <td>{{ user.joined_at|datetime }}</td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: No filter named 'datetime'.
+2025-06-15 09:47:56,862 - app - ERROR - Exception on /admin/users [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 40, in users
+    return render_template('admin/users.html', users=users)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\templates\admin\users.html", line 62, in template
+    <td>{{ user.joined_at|datetime }}</td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: No filter named 'datetime'.
+2025-06-15 09:48:01,223 - app - ERROR - Exception on /admin/users [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 40, in users
+    return render_template('admin/users.html', users=users)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\templates\admin\users.html", line 62, in template
+    <td>{{ user.joined_at|datetime }}</td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: No filter named 'datetime'.
+2025-06-15 09:48:19,450 - app - ERROR - Exception on /admin/broadcast [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\admin\routes.py", line 72, in broadcast
+    return render_template('admin/broadcast.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\templates\admin\broadcast.html", line 58, in template
+    <small>{{ broadcast.timestamp|datetime }}</small>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: No filter named 'datetime'.
+2025-06-15 09:48:46,815 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:50:35,758 - bot.handlers - INFO - Sending photo from 6261300717 to 2023022792, file_id: AgACAgUAAxkBAAJoo2hOShMT5H9oB6GC1clXixFoMoI0AAIlwTEbnmNwVrWN-DGGYuKzAQADAgADeQADNgQ
+2025-06-15 09:52:31,252 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:52:50,658 - bot.handlers - INFO - Sending photo from 6261300717 to 2023022792, file_id: AgACAgUAAxkBAAJoj2hORg6DeufbZnyx3M6Ux_y9D1e7AAIiwTEbnmNwVk2XvntVRkrwAQADAgADeQADNgQ
+2025-06-15 09:53:10,336 - bot.handlers - INFO - Sending voice from 6261300717 to 2023022792, file_id: AwACAgUAAxkBAAJoqWhOSq0ZzU13gL2CFfembhmOOpM4AAK2FgACnmNwVo-iKLslPl8yNgQ
+2025-06-15 09:56:59,784 - __main__ - INFO - Starting polling thread...
+2025-06-15 09:57:01,248 - engineio.server - ERROR - message handler error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+TypeError: handle_admin_connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 538, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 825, in _handle_event
+    ret = handler()
+          ^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 346, in handle_admin_connect
+    chat_id = f"{min(user_id, int(partner_id))}_{max(user_id, int(partner_id))}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+TypeError: handle_admin_connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\engineio\server.py", line 450, in run_handler
+    return self.handlers[event](*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 652, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 541, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 825, in _handle_event
+    ret = handler()
+          ^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 346, in handle_admin_connect
+    chat_id = f"{min(user_id, int(partner_id))}_{max(user_id, int(partner_id))}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+2025-06-15 09:57:12,265 - engineio.server - ERROR - message handler error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+TypeError: handle_admin_connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 538, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 825, in _handle_event
+    ret = handler()
+          ^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 346, in handle_admin_connect
+    chat_id = f"{min(user_id, int(partner_id))}_{max(user_id, int(partner_id))}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+TypeError: handle_admin_connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\engineio\server.py", line 450, in run_handler
+    return self.handlers[event](*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 652, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 541, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 825, in _handle_event
+    ret = handler()
+          ^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 346, in handle_admin_connect
+    chat_id = f"{min(user_id, int(partner_id))}_{max(user_id, int(partner_id))}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+2025-06-15 09:57:32,543 - engineio.server - ERROR - message handler error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+TypeError: handle_admin_connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 538, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 825, in _handle_event
+    ret = handler()
+          ^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 346, in handle_admin_connect
+    chat_id = f"{min(user_id, int(partner_id))}_{max(user_id, int(partner_id))}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+TypeError: handle_admin_connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\engineio\server.py", line 450, in run_handler
+    return self.handlers[event](*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 652, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 541, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 825, in _handle_event
+    ret = handler()
+          ^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 346, in handle_admin_connect
+    chat_id = f"{min(user_id, int(partner_id))}_{max(user_id, int(partner_id))}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+2025-06-15 09:58:24,304 - engineio.server - ERROR - message handler error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+TypeError: handle_admin_connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 538, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 825, in _handle_event
+    ret = handler()
+          ^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 346, in handle_admin_connect
+    chat_id = f"{min(user_id, int(partner_id))}_{max(user_id, int(partner_id))}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+TypeError: handle_admin_connect() takes 0 positional arguments but 1 was given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\engineio\server.py", line 450, in run_handler
+    return self.handlers[event](*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 652, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 541, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 825, in _handle_event
+    ret = handler()
+          ^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 346, in handle_admin_connect
+    chat_id = f"{min(user_id, int(partner_id))}_{max(user_id, int(partner_id))}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+2025-06-15 09:59:35,283 - __main__ - INFO - Starting polling thread...
+2025-06-15 10:00:13,808 - engineio.server - ERROR - message handler error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\engineio\server.py", line 450, in run_handler
+    return self.handlers[event](*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 652, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 538, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 358, in handle_admin_connect
+    emit('connected', {'data': 'Connected to admin panel'})
+    ^^^^
+NameError: name 'emit' is not defined
+2025-06-15 10:00:36,686 - __main__ - ERROR - Update handling error: '<' not supported between instances of 'int' and 'str'
+2025-06-15 10:00:39,471 - __main__ - ERROR - Update handling error: '<' not supported between instances of 'int' and 'str'
+2025-06-15 10:00:46,598 - __main__ - ERROR - Update handling error: '<' not supported between instances of 'int' and 'str'
+2025-06-15 10:00:59,931 - engineio.server - ERROR - message handler error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\engineio\server.py", line 450, in run_handler
+    return self.handlers[event](*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 652, in _handle_eio_message
+    self._handle_connect(eio_sid, pkt.namespace, pkt.data)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 538, in _handle_connect
+    success = self._trigger_event(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\socketio\server.py", line 617, in _trigger_event
+    return handler(*args)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 282, in _handler
+    return self._handle_event(handler, message, namespace, sid,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask_socketio\__init__.py", line 823, in _handle_event
+    ret = handler(auth)
+          ^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\app.py", line 358, in handle_admin_connect
+    emit('connected', {'data': 'Connected to admin panel'})
+    ^^^^
+NameError: name 'emit' is not defined
+2025-06-15 10:01:08,112 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749961868.0840106, 'wait_start': 1749958480.2331686, 'chat_start': 1749959329.1259732}
+2025-06-15 10:01:08,113 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 10:02:23,366 - __main__ - INFO - Starting polling thread...
+2025-06-15 10:02:26,606 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749961946.590381, 'wait_start': 1749958480.2331686, 'chat_start': 1749959329.1259732}
+2025-06-15 10:02:26,607 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 10:02:29,901 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749961949.885437, 'wait_start': 1749958480.2331686, 'chat_start': 1749959329.1259732}
+2025-06-15 10:02:29,902 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 10:02:32,014 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749961951.9856656, 'wait_start': 1749958480.2331686, 'chat_start': 1749959329.1259732}
+2025-06-15 10:02:32,015 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 10:03:10,095 - bot.utils - ERROR - Error loading data\chats.json: Expecting value: line 1 column 1 (char 0)
+2025-06-15 11:10:59,667 - __main__ - INFO - Starting polling thread...
+2025-06-15 11:11:02,262 - __main__ - INFO - Ended dead chat between 6261300717 and 2023022792
+2025-06-15 11:11:02,630 - __main__ - INFO - Ended dead chat between 2023022792 and 6261300717
+2025-06-15 11:51:55,016 - __main__ - INFO - Starting polling thread...
+2025-06-15 11:52:03,675 - bot.utils - ERROR - Request error on attempt 1 for getUpdates: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-06-15 11:52:22,039 - __main__ - INFO - Starting polling thread...
+2025-06-15 11:52:23,447 - bot.utils - ERROR - Telegram API error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:52:23,448 - bot.utils - ERROR - Unexpected error on attempt 2 for getUpdates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:52:23,452 - __main__ - ERROR - Telegram API error in polling: Unexpected error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:52:28,679 - bot.utils - ERROR - Telegram API error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:52:28,680 - bot.utils - ERROR - Unexpected error on attempt 1 for getUpdates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:52:28,680 - __main__ - ERROR - Telegram API error in polling: Unexpected error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:52:33,881 - bot.utils - ERROR - Telegram API error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:52:33,882 - bot.utils - ERROR - Unexpected error on attempt 1 for getUpdates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:52:33,883 - __main__ - ERROR - Telegram API error in polling: Unexpected error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-06-15 11:53:27,050 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'is_authenticated'
+2025-06-15 11:53:32,903 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'is_authenticated'
+2025-06-15 11:53:35,053 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'is_authenticated'
+2025-06-15 11:53:36,690 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'is_authenticated'
+2025-06-15 11:54:01,603 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'is_authenticated'
+2025-06-15 11:55:32,705 - __main__ - INFO - Starting polling thread...
+2025-06-15 11:55:57,698 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'ready', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749968757.6800327, 'wait_start': 1749958480.2331686, 'chat_start': 1749959329.1259732}
+2025-06-15 11:55:57,715 - bot.handlers - INFO - Finding partner for user 2023022792
+2025-06-15 11:55:57,716 - bot.handlers - INFO - Available waiting users: {'2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749968757.6800327, 'wait_start': 1749968757.698029, 'chat_start': 1749959329.1259732}}
+2025-06-15 11:56:15,639 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'ready', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749968775.610015, 'wait_start': 1749957891.2923758, 'chat_start': 1749959329.124972}
+2025-06-15 11:56:15,666 - bot.handlers - INFO - Finding partner for user 6261300717
+2025-06-15 11:56:15,668 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749968775.610015, 'wait_start': 1749968775.6390176, 'chat_start': 1749959329.124972}, '2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749957790.3230498, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749968760.0697818, 'wait_start': 1749968757.698029, 'chat_start': 1749959329.1259732}}
+2025-06-15 11:56:15,672 - bot.handlers - INFO - Found random partner: 2023022792
+2025-06-15 12:03:15,230 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:07:23,613 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:08:04,016 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749969483.9925053, 'wait_start': 1749968757.698029, 'chat_start': 1749968775.6760185}
+2025-06-15 12:08:04,017 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 12:08:08,025 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749969487.9889972, 'wait_start': 1749968757.698029, 'chat_start': 1749968775.6760185}
+2025-06-15 12:08:08,025 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 12:08:13,007 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749969492.9810393, 'wait_start': 1749968757.698029, 'chat_start': 1749968775.6760185}
+2025-06-15 12:08:13,008 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 12:08:17,590 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749969497.5622063, 'wait_start': 1749968757.698029, 'chat_start': 1749968775.6760185}
+2025-06-15 12:08:17,590 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 12:08:20,967 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749957790.3230498, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749969500.9374173, 'wait_start': 1749968757.698029, 'chat_start': 1749968775.6760185}
+2025-06-15 12:08:20,968 - bot.handlers - INFO - User 2023022792 status not ready: chatting
+2025-06-15 12:08:32,395 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '2023022792', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749969512.3770065, 'wait_start': 1749968775.6390176, 'chat_start': 1749968775.6730165}
+2025-06-15 12:08:32,396 - bot.handlers - INFO - User 6261300717 status not ready: chatting
+2025-06-15 12:14:45,215 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:15:53,645 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '2023022792', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749969953.6181889, 'wait_start': 1749968775.6390176, 'chat_start': 1749968775.6730165}
+2025-06-15 12:15:53,645 - bot.handlers - INFO - User 6261300717 status not ready: chatting
+2025-06-15 12:19:35,404 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:24:37,094 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:35:27,089 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:35:59,590 - engineio.server - ERROR - Invalid session 2RwxSEtL-d4KU39qAAAE (further occurrences of this error will be logged with level INFO)
+2025-06-15 12:38:31,178 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:41:20,834 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:41:43,197 - engineio.server - ERROR - Invalid session k4WZub-FGBSYx1j_AAAA (further occurrences of this error will be logged with level INFO)
+2025-06-15 12:42:07,456 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:42:47,206 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:42:52,223 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:42:55,494 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:42:57,613 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:43:03,429 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:43:07,406 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:43:08,177 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:45:46,186 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:45:51,959 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:45:56,966 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:45:59,444 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:46:06,989 - __main__ - ERROR - Update handling error: 'UserManager' object has no attribute 'update_last_active'
+2025-06-15 12:49:31,282 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:50:04,233 - bot.handlers - INFO - Gender selection - User 2023022792 before: {'username': 'moyemoye0011', 'status': 'new', 'joined_at': 1749972001.085875, 'partner': None, 'gender': None, 'interest': None, 'banned': False}
+2025-06-15 12:50:04,235 - bot.handlers - INFO - Gender selection - User 2023022792 after: {'username': 'moyemoye0011', 'status': 'gender_set', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': None, 'banned': False}
+2025-06-15 12:50:06,398 - bot.handlers - INFO - Interest selection - User 2023022792 before: {'username': 'moyemoye0011', 'status': 'gender_set', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': None, 'banned': False}
+2025-06-15 12:50:06,400 - bot.handlers - INFO - Interest selection - User 2023022792 after: {'username': 'moyemoye0011', 'status': 'ready', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False}
+2025-06-15 12:50:08,936 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'ready', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972008.9034753}
+2025-06-15 12:50:08,954 - bot.handlers - INFO - Finding partner for user 2023022792
+2025-06-15 12:50:08,955 - bot.handlers - INFO - Available waiting users: {'2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972008.9034753, 'wait_start': 1749972008.9371214}}
+2025-06-15 12:50:20,529 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '2023022792', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972020.4942296, 'wait_start': 1749968775.6390176, 'chat_start': 1749968775.6730165}
+2025-06-15 12:50:20,529 - bot.handlers - INFO - User 6261300717 status not ready: chatting
+2025-06-15 12:50:24,854 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '2023022792', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972024.825169, 'wait_start': 1749968775.6390176, 'chat_start': 1749968775.6730165}
+2025-06-15 12:50:24,854 - bot.handlers - INFO - User 6261300717 status not ready: chatting
+2025-06-15 12:50:30,572 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '2023022792', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972030.398553, 'wait_start': 1749968775.6390176, 'chat_start': 1749968775.6730165}
+2025-06-15 12:50:30,573 - bot.handlers - INFO - User 6261300717 status not ready: chatting
+2025-06-15 12:52:45,967 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:52:49,147 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '2023022792', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972169.1193917, 'wait_start': 1749968775.6390176, 'chat_start': 1749968775.6730165}
+2025-06-15 12:53:39,151 - __main__ - INFO - Starting polling thread...
+2025-06-15 12:53:40,444 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'ready', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972220.4284875, 'wait_start': 1749968775.6390176, 'chat_start': 1749968775.6730165}
+2025-06-15 12:53:40,457 - bot.handlers - INFO - Finding partner for user 6261300717
+2025-06-15 12:53:40,457 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972220.4284875, 'wait_start': 1749972220.444492, 'chat_start': 1749968775.6730165}}
+2025-06-15 12:53:41,916 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972221.8984087, 'wait_start': 1749972220.444492, 'chat_start': 1749968775.6730165}
+2025-06-15 12:53:41,918 - bot.handlers - INFO - Finding partner for user 6261300717
+2025-06-15 12:53:41,918 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972221.8984087, 'wait_start': 1749972220.444492, 'chat_start': 1749968775.6730165}}
+2025-06-15 12:53:42,321 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'ready', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972222.3084106, 'wait_start': 1749972008.9371214}
+2025-06-15 12:53:42,340 - bot.handlers - INFO - Finding partner for user 2023022792
+2025-06-15 12:53:42,341 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972221.8984087, 'wait_start': 1749972220.444492, 'chat_start': 1749968775.6730165}, '2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972222.3084106, 'wait_start': 1749972222.3224118}}
+2025-06-15 12:53:42,341 - bot.handlers - INFO - Found random partner: 6261300717
+2025-06-15 12:53:43,158 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'chatting', 'joined_at': 1749972001.085875, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972223.1410468, 'wait_start': 1749972222.3224118, 'chat_start': 1749972222.3424075}
+2025-06-15 12:53:44,005 - bot.handlers - INFO - Finding partner for user 2023022792
+2025-06-15 12:53:44,006 - bot.handlers - INFO - Available waiting users: {'2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749972001.085875, 'partner': '6261300717', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972223.1410468, 'wait_start': 1749972223.9870374, 'chat_start': 1749972222.3424075}}
+2025-06-15 12:54:04,173 - bot.handlers - INFO - Chat command - User 2023022792 data: {'username': 'moyemoye0011', 'status': 'ready', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972244.142976, 'wait_start': 1749972223.9870374, 'chat_start': 1749972222.3424075}
+2025-06-15 12:54:04,190 - bot.handlers - INFO - Finding partner for user 2023022792
+2025-06-15 12:54:04,191 - bot.handlers - INFO - Available waiting users: {'2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972244.142976, 'wait_start': 1749972244.173857, 'chat_start': 1749972222.3424075}}
+2025-06-15 12:54:11,282 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'ready', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972251.2620683, 'wait_start': 1749972220.444492, 'chat_start': 1749972222.3434098}
+2025-06-15 12:54:11,297 - bot.handlers - INFO - Finding partner for user 6261300717
+2025-06-15 12:54:11,297 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972251.2620683, 'wait_start': 1749972251.2830627, 'chat_start': 1749972222.3434098}, '2023022792': {'username': 'moyemoye0011', 'status': 'waiting', 'joined_at': 1749972001.085875, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1749972244.142976, 'wait_start': 1749972244.173857, 'chat_start': 1749972222.3424075}}
+2025-06-15 12:54:11,298 - bot.handlers - INFO - Found random partner: 2023022792
+2025-06-15 12:54:30,066 - bot.handlers - INFO - Sending photo from 6261300717 to 2023022792, file_id: AgACAgUAAxkBAAJpQWhOdS25ftRkBopXpllgu0Fc-xEWAAL0wTEbnmNwVsaVFquTa-onAQADAgADeQADNgQ
+2025-06-15 12:54:30,485 - bot.handlers - INFO - Sending video from 6261300717 to 2023022792, file_id: BAACAgUAAxkBAAJpQmhOdS2F_wIaEHregnjun6yVf8eMAAI3FwACnmNwVu9Pcob3XMEdNgQ
+2025-06-15 13:02:27,856 - __main__ - INFO - Starting polling thread...
+2025-06-15 13:03:36,212 - __main__ - INFO - Starting polling thread...
+2025-06-15 13:25:15,731 - __main__ - INFO - Starting polling thread...

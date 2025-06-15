@@ -1,0 +1,83 @@
+{
+  "2025-06-15": {
+    "2023022792_6261300717": [
+      {
+        "user_id": "2023022792",
+        "message": "/admin",
+        "type": "text",
+        "timestamp": 1749961990.096079
+      },
+      {
+        "user_id": "2023022792",
+        "message": "/help",
+        "type": "text",
+        "timestamp": 1749968798.698857
+      },
+      {
+        "user_id": "2023022792",
+        "message": "/help",
+        "type": "text",
+        "timestamp": 1749968801.4644046
+      },
+      {
+        "user_id": "2023022792",
+        "message": "/help",
+        "type": "text",
+        "timestamp": 1749968802.2094424
+      },
+      {
+        "user_id": "2023022792",
+        "message": "/help",
+        "type": "text",
+        "timestamp": 1749968802.8600702
+      },
+      {
+        "user_id": "2023022792",
+        "message": "/help",
+        "type": "text",
+        "timestamp": 1749968803.4348419
+      },
+      {
+        "user_id": "2023022792",
+        "message": "/help",
+        "type": "text",
+        "timestamp": 1749968804.0198457
+      }
+    ],
+    "6261300717_2023022792": [
+      {
+        "user_id": "6261300717",
+        "message": "Hi",
+        "type": "text",
+        "timestamp": 1749968788.140813
+      },
+      {
+        "user_id": "6261300717",
+        "message": "",
+        "timestamp": 1749972270.4690464,
+        "type": "photo",
+        "media_info": {
+          "file_id": "AgACAgUAAxkBAAJpQWhOdS25ftRkBopXpllgu0Fc-xEWAAL0wTEbnmNwVsaVFquTa-onAQADAgADeQADNgQ",
+          "caption": "",
+          "file_size": 96663,
+          "width": 720,
+          "height": 1280
+        }
+      },
+      {
+        "user_id": "6261300717",
+        "message": "",
+        "timestamp": 1749972270.873378,
+        "type": "video",
+        "media_info": {
+          "file_id": "BAACAgUAAxkBAAJpQmhOdS2F_wIaEHregnjun6yVf8eMAAI3FwACnmNwVu9Pcob3XMEdNgQ",
+          "caption": "",
+          "file_size": 1902935,
+          "duration": 73,
+          "width": 364,
+          "height": 718
+        }
+      }
+    ]
+  }
+}

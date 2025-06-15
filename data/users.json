@@ -1,0 +1,36 @@
+{
+  "6261300717": {
+    "username": "jbiswas03",
+    "status": "ready",
+    "joined_at": 1749957772.330016,
+    "partner": null,
+    "gender": "M",
+    "interest": "F",
+    "banned": false,
+    "last_active": 1749972312.79419,
+    "wait_start": 1749972251.2830627,
+    "chat_start": 1749972251.2990596
+  },
+  "7747443160": {
+    "username": "Unknown",
+    "status": "new",
+    "joined_at": 1749957804.0011685,
+    "partner": null,
+    "gender": null,
+    "interest": null,
+    "banned": false,
+    "last_active": 1749957807.498425
+  },
+  "2023022792": {
+    "username": "moyemoye0011",
+    "status": "ready",
+    "joined_at": 1749972001.085875,
+    "partner": null,
+    "gender": "M",
+    "interest": "F",
+    "banned": false,
+    "last_active": 1749972244.142976,
+    "wait_start": 1749972244.173857,
+    "chat_start": 1749972251.300068
+  }
+}
