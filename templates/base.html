@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Telegram Bot Admin{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background-color: #4e73df;
+            background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+            background-size: cover;
+        }
+        .sidebar-brand {
+            height: 4.375rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            z-index: 1;
+        }
+        .sidebar-brand span {
+            color: white;
+        }
+        .nav-item {
+            position: relative;
+            margin-bottom: 0.25rem;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.75rem 1rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .nav-link:hover {
+            color: white;
+        }
+        .nav-link i {
+            margin-right: 0.25rem;
+        }
+        .content {
+            flex: 1;
+            padding: 1.5rem;
+        }
+        .topbar {
+            height: 4.375rem;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+            background-color: white;
+            padding: 0 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar px-0 col-lg-2">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url_for('admin.dashboard') }}">
+                <span>Bot Admin</span>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <div class="sidebar-nav">
+                <a href="{{ url_for('admin.dashboard') }}" class="nav-link">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="{{ url_for('admin.users') }}" class="nav-link">
+                    <i class="fas fa-users"></i> Users
+                </a>
+                <a href="{{ url_for('admin.monitoring') }}" class="nav-link">
+                    <i class="fas fa-chart-line"></i> Monitoring
+                </a>
+                <a href="{{ url_for('admin.chat_history') }}" class="nav-link">
+                    <i class="fas fa-history"></i> Chat History
+                </a>
+                <a href="{{ url_for('admin.broadcast') }}" class="nav-link">
+                    <i class="fas fa-broadcast-tower"></i> Broadcast
+                </a>
+                <a href="{{ url_for('logout') }}" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="content col-lg-10">
+            <!-- Topbar -->
+            <nav class="topbar navbar navbar-expand navbar-light bg-white mb-4">
+                <h1 class="h3 mb-0 text-gray-800">{% block header %}{% endblock %}</h1>
+            </nav>
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html> 

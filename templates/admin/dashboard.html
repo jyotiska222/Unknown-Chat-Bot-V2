@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Telegram Bot Admin{% endblock %}
+
+{% block header %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Stats Cards -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Users</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalUsers">{{ stats.total_users }}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Active Chats</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="activeChats">{{ stats.active_chats }}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Online Users</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="onlineUsers">{{ stats.online_users }}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-circle fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Waiting Users</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="waitingUsers">{{ stats.waiting_users }}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-clock fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row -->
+<div class="row">
+    <!-- User Activity Chart -->
+    <div class="col-xl-8 col-lg-7">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">User Activity (Last 24 Hours)</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="userActivityChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gender Distribution Chart -->
+    <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Gender Distribution</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-pie">
+                    <canvas id="genderDistributionChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Socket.IO
+    const socket = io('/admin');
+    let userActivityChart, genderDistributionChart;
+
+    // Generate labels for the last 24 hours
+    function generateHourLabels() {
+        const labels = [];
+        const now = new Date();
+        for (let i = 23; i >= 0; i--) {
+            const d = new Date(now - i * 3600000);
+            labels.push(d.getHours().toString().padStart(2, '0') + ':00');
+        }
+        return labels;
+    }
+
+    // Initialize User Activity Chart
+    const activityCtx = document.getElementById('userActivityChart').getContext('2d');
+    userActivityChart = new Chart(activityCtx, {
+        type: 'line',
+        data: {
+            labels: generateHourLabels(),
+            datasets: [{
+                label: 'Active Users',
+                data: new Array(24).fill(0),
+                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                tension: 0.1,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Initialize Gender Distribution Chart
+    const genderCtx = document.getElementById('genderDistributionChart').getContext('2d');
+    genderDistributionChart = new Chart(genderCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Male', 'Female', 'Other'],
+            datasets: [{
+                data: [0, 0, 0],
+                backgroundColor: [
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 205, 86)'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+
+    // Connect to WebSocket
+    socket.on('connect', function() {
+        console.log('Connected to WebSocket');
+    });
+
+    // Handle stats updates
+    socket.on('stats_update', function(data) {
+        // Update stats cards
+        document.getElementById('totalUsers').textContent = data.total_users;
+        document.getElementById('activeChats').textContent = data.active_chats;
+        document.getElementById('onlineUsers').textContent = data.active_users;
+        document.getElementById('waitingUsers').textContent = data.waiting_users;
+
+        // Update gender distribution chart
+        if (data.gender_stats) {
+            genderDistributionChart.data.datasets[0].data = [
+                data.gender_stats.M,
+                data.gender_stats.F,
+                data.gender_stats.O
+            ];
+            genderDistributionChart.update();
+        }
+
+        // Update user activity chart
+        if (data.hourly_activity) {
+            userActivityChart.data.datasets[0].data = data.hourly_activity.reverse();
+            userActivityChart.update();
+        }
+    });
+});
+</script>
+
+<style>
+.chart-area {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.chart-pie {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+</style>
+{% endblock %} 

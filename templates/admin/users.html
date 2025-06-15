@@ -1,0 +1,443 @@
+{% extends "base.html" %}
+
+{% block title %}Users Management - Telegram Bot Admin{% endblock %}
+
+{% block header %}Users Management{% endblock %}
+
+{% block content %}
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 font-weight-bold text-primary">Registered Users</h6>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-primary" id="refreshUsers">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+            <button type="button" class="btn btn-outline-success" id="exportUsers">
+                <i class="fas fa-file-export"></i> Export
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="usersTable">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Username</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                        <th>Partner</th>
+                        <th>Joined</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user_id, user in users.items() %}
+                    <tr data-user-id="{{ user_id }}" class="{{ 'table-danger' if user.banned else '' }}">
+                        <td>{{ user_id }}</td>
+                        <td>{{ user.username or 'Unknown' }}</td>
+                        <td>
+                            {% if user.gender == 'M' %}👨 Male
+                            {% elif user.gender == 'F' %}👩 Female
+                            {% elif user.gender == 'O' %}⭐ Other
+                            {% else %}❓ Unknown{% endif %}
+                        </td>
+                        <td>
+                            <span class="badge {{ 'bg-success' if user.status == 'chatting' 
+                                               else 'bg-warning' if user.status == 'waiting'
+                                               else 'bg-danger' if user.banned
+                                               else 'bg-secondary' }}">
+                                {{ user.status or 'unknown' }}
+                            </span>
+                        </td>
+                        <td>
+                            {% if user.partner %}
+                            <a href="#" class="partner-link" data-user-id="{{ user.partner }}">
+                                {{ users[user.partner].username if users[user.partner] else user.partner }}
+                            </a>
+                            {% else %}
+                            -
+                            {% endif %}
+                        </td>
+                        <td>{{ user.joined_at|datetime }}</td>
+                        <td>
+                            {% if user.banned %}
+                            <button type="button" class="btn btn-sm btn-success unban-user" 
+                                    data-user-id="{{ user_id }}" data-username="{{ user.username or 'Unknown' }}"
+                                    title="Unban user">
+                                <i class="fas fa-unlock"></i> Unban
+                            </button>
+                            {% else %}
+                            <button type="button" class="btn btn-sm btn-danger ban-user" 
+                                    data-user-id="{{ user_id }}" data-username="{{ user.username or 'Unknown' }}"
+                                    title="Ban user">
+                                <i class="fas fa-ban"></i> Ban
+                            </button>
+                            {% endif %}
+                            <button type="button" class="btn btn-sm btn-info view-history" 
+                                    data-user-id="{{ user_id }}" title="View chat history">
+                                <i class="fas fa-history"></i> History
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Ban User Confirmation Modal -->
+<div class="modal fade" id="banUserModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Ban User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to ban user <strong id="banUsername"></strong>?</p>
+                <p class="text-danger">This will:</p>
+                <ul class="text-danger">
+                    <li>Disconnect them from any active chat</li>
+                    <li>Prevent them from starting new chats</li>
+                    <li>Block them from using the service</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="confirmBan">Yes, Ban User</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Unban User Confirmation Modal -->
+<div class="modal fade" id="unbanUserModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Unban User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to unban user <strong id="unbanUsername"></strong>?</p>
+                <p class="text-success">This will allow them to use the service again.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="confirmUnban">Yes, Unban User</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chat History Modal -->
+<div class="modal fade" id="chatHistoryModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Chat History</h5>
+                <div class="ms-auto">
+                    <button type="button" class="btn btn-outline-primary btn-sm refresh-history" title="Refresh chat history">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                    <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" title="Close" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="chat-history-container">
+                    <!-- Chat history will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize DataTable
+    const table = new DataTable('#usersTable', {
+        order: [[5, 'desc']],  // Sort by joined date
+        pageLength: 25,
+        language: {
+            search: "Search users:"
+        }
+    });
+    
+    // Initialize modals
+    const banModal = new bootstrap.Modal(document.getElementById('banUserModal'));
+    const unbanModal = new bootstrap.Modal(document.getElementById('unbanUserModal'));
+    const historyModal = new bootstrap.Modal(document.getElementById('chatHistoryModal'));
+    
+    let selectedUserId = null;
+    
+    // Ban user button click
+    document.querySelectorAll('.ban-user').forEach(button => {
+        button.addEventListener('click', function() {
+            selectedUserId = this.dataset.userId;
+            document.getElementById('banUsername').textContent = 
+                `${this.dataset.username} (ID: ${selectedUserId})`;
+            banModal.show();
+        });
+    });
+    
+    // Unban user button click
+    document.querySelectorAll('.unban-user').forEach(button => {
+        button.addEventListener('click', function() {
+            selectedUserId = this.dataset.userId;
+            document.getElementById('unbanUsername').textContent = 
+                `${this.dataset.username} (ID: ${selectedUserId})`;
+            unbanModal.show();
+        });
+    });
+    
+    // Confirm ban
+    document.getElementById('confirmBan').addEventListener('click', async function() {
+        if (selectedUserId) {
+            try {
+                const response = await fetch('/admin/api/ban_user', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `user_id=${selectedUserId}`
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Update the table row
+                    const row = table.row(`tr[data-user-id="${selectedUserId}"]`);
+                    const rowData = row.data();
+                    
+                    // Update status badge and button
+                    const statusCell = row.nodes().to$().find('td:eq(3)');
+                    statusCell.html('<span class="badge bg-danger">banned</span>');
+                    
+                    const actionCell = row.nodes().to$().find('td:eq(6)');
+                    actionCell.find('.ban-user').replaceWith(`
+                        <button type="button" class="btn btn-sm btn-success unban-user" 
+                                data-user-id="${selectedUserId}" data-username="${rowData[1]}"
+                                title="Unban user">
+                            <i class="fas fa-unlock"></i> Unban
+                        </button>
+                    `);
+                    
+                    // Add danger class to row
+                    row.nodes().to$().addClass('table-danger');
+                    
+                    // Show success message
+                    showAlert('User banned successfully', 'success');
+                    
+                    // Reattach event listener to new unban button
+                    attachUnbanListener(actionCell.find('.unban-user')[0]);
+                } else {
+                    showAlert(result.error || 'Failed to ban user', 'error');
+                }
+                
+                banModal.hide();
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('Error banning user', 'error');
+            }
+        }
+    });
+    
+    // Confirm unban
+    document.getElementById('confirmUnban').addEventListener('click', async function() {
+        if (selectedUserId) {
+            try {
+                const response = await fetch('/admin/api/unban_user', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `user_id=${selectedUserId}`
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Update the table row
+                    const row = table.row(`tr[data-user-id="${selectedUserId}"]`);
+                    const rowData = row.data();
+                    
+                    // Update status badge and button
+                    const statusCell = row.nodes().to$().find('td:eq(3)');
+                    statusCell.html('<span class="badge bg-secondary">ready</span>');
+                    
+                    const actionCell = row.nodes().to$().find('td:eq(6)');
+                    actionCell.find('.unban-user').replaceWith(`
+                        <button type="button" class="btn btn-sm btn-danger ban-user" 
+                                data-user-id="${selectedUserId}" data-username="${rowData[1]}"
+                                title="Ban user">
+                            <i class="fas fa-ban"></i> Ban
+                        </button>
+                    `);
+                    
+                    // Remove danger class from row
+                    row.nodes().to$().removeClass('table-danger');
+                    
+                    // Show success message
+                    showAlert('User unbanned successfully', 'success');
+                    
+                    // Reattach event listener to new ban button
+                    attachBanListener(actionCell.find('.ban-user')[0]);
+                } else {
+                    showAlert(result.error || 'Failed to unban user', 'error');
+                }
+                
+                unbanModal.hide();
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('Error unbanning user', 'error');
+            }
+        }
+    });
+    
+    // View chat history
+    document.querySelectorAll('.view-history').forEach(button => {
+        button.addEventListener('click', loadChatHistory);
+    });
+    
+    // Refresh chat history
+    document.querySelectorAll('.refresh-history').forEach(button => {
+        button.addEventListener('click', function() {
+            const userId = document.querySelector('.chat-history-container').dataset.userId;
+            if (userId) {
+                loadChatHistory.call({ dataset: { userId } });
+            }
+        });
+    });
+    
+    // Refresh users
+    document.getElementById('refreshUsers').addEventListener('click', function() {
+        location.reload();
+    });
+    
+    // Export users
+    document.getElementById('exportUsers').addEventListener('click', async function() {
+        const rows = table.rows().data();
+        const csvContent = [
+            ['User ID', 'Username', 'Gender', 'Status', 'Partner', 'Joined'],
+            ...Array.from(rows).map(row => row.slice(0, 6))
+        ].map(row => row.join(',')).join('\n');
+        
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `users_${moment().format('YYYY-MM-DD_HH-mm')}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    });
+    
+    function attachBanListener(button) {
+        button.addEventListener('click', function() {
+            selectedUserId = this.dataset.userId;
+            document.getElementById('banUsername').textContent = 
+                `${this.dataset.username} (ID: ${selectedUserId})`;
+            banModal.show();
+        });
+    }
+    
+    function attachUnbanListener(button) {
+        button.addEventListener('click', function() {
+            selectedUserId = this.dataset.userId;
+            document.getElementById('unbanUsername').textContent = 
+                `${this.dataset.username} (ID: ${selectedUserId})`;
+            unbanModal.show();
+        });
+    }
+    
+    async function loadChatHistory() {
+        const userId = this.dataset.userId;
+        const container = document.querySelector('.chat-history-container');
+        container.dataset.userId = userId; // Store user ID for refresh
+        
+        try {
+            const response = await fetch(`/admin/api/chat-history?user_id=${userId}`);
+            const data = await response.json();
+            
+            let historyHtml = '<div class="list-group">';
+            // Sort chats by start_time in descending order (latest first)
+            const sortedChats = data.chats.sort((a, b) => b.start_time - a.start_time);
+            
+            for (const chat of sortedChats) {
+                const duration = Math.round((chat.end_time - chat.start_time) / 60);
+                const partner = chat.user1.id === userId ? chat.user2 : chat.user1;
+                
+                historyHtml += `
+                    <div class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">Chat with ${partner.username}</h6>
+                            <small>${moment(chat.start_time * 1000).format('YYYY-MM-DD HH:mm:ss')}</small>
+                        </div>
+                        <p class="mb-1">${chat.messages.length} messages</p>
+                        <small>Duration: ${duration} minutes</small>
+                    </div>
+                `;
+            }
+            historyHtml += '</div>';
+            
+            container.innerHTML = historyHtml;
+            if (!historyModal._isShown) {
+                historyModal.show();
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showAlert('Error loading chat history', 'error');
+        }
+    }
+    
+    function showAlert(message, type) {
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type === 'error' ? 'danger' : 'success'} alert-dismissible fade show`;
+        alertDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        document.querySelector('.card-body').insertBefore(alertDiv, document.querySelector('.table-responsive'));
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(() => {
+            const bsAlert = new bootstrap.Alert(alertDiv);
+            bsAlert.close();
+        }, 5000);
+    }
+});
+</script>
+
+<style>
+.table td {
+    vertical-align: middle;
+}
+
+.partner-link {
+    text-decoration: none;
+}
+
+.partner-link:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    margin-bottom: 1rem;
+}
+
+.chat-history-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.list-group-item small {
+    color: #6c757d;
+}
+</style>
+{% endblock %} 

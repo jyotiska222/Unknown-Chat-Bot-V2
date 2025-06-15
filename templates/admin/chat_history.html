@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+
+{% block title %}Chat History - Telegram Bot Admin{% endblock %}
+
+{% block header %}Chat History{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card shadow">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Filters</h6>
+            </div>
+            <div class="card-body">
+                <form id="filterForm" class="row g-3">
+                    <div class="col-md-3">
+                        <label for="userId" class="form-label">User ID</label>
+                        <input type="text" class="form-control" id="userId" placeholder="Enter user ID">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" id="startDate">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="endDate" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="endDate">
+                    </div>
+                    <div class="col-md-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary">Apply Filters</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                <h6 class="m-0 font-weight-bold text-primary">Chat History</h6>
+                <div class="chat-count text-muted"></div>
+            </div>
+            <div class="card-body">
+                <div id="chatHistory" class="accordion">
+                    <!-- Chat history will be loaded here -->
+                </div>
+                
+                <!-- Pagination -->
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div class="pagination-info text-muted">
+                        <!-- Pagination info will be shown here -->
+                    </div>
+                    <nav aria-label="Chat history pagination">
+                        <ul class="pagination mb-0">
+                            <!-- Pagination controls will be added here -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Media Preview Modal -->
+<div class="modal fade" id="mediaPreviewModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Media Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <div id="mediaPreviewContent"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterForm = document.getElementById('filterForm');
+    const chatHistory = document.getElementById('chatHistory');
+    const mediaPreviewModal = new bootstrap.Modal(document.getElementById('mediaPreviewModal'));
+    let currentPage = 1;
+    
+    // Load initial chat history
+    loadChatHistory(1);
+    
+    // Handle filter form submission
+    filterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        currentPage = 1;  // Reset to first page when applying filters
+        loadChatHistory(currentPage);
+    });
+    
+    function loadChatHistory(page) {
+        const userId = document.getElementById('userId').value;
+        const startDate = document.getElementById('startDate').value;
+        const endDate = document.getElementById('endDate').value;
+        
+        const params = new URLSearchParams();
+        if (userId) params.append('user_id', userId);
+        if (startDate) params.append('start_date', startDate);
+        if (endDate) params.append('end_date', endDate);
+        params.append('page', page);
+        
+        fetch(`/api/chat-history?${params.toString()}`)
+            .then(response => response.json())
+            .then(data => {
+                displayChats(data.chats);
+                updatePagination(data.pagination);
+                updateChatCount(data.pagination);
+            })
+            .catch(error => console.error('Error loading chat history:', error));
+    }
+    
+    function updateChatCount(pagination) {
+        const chatCount = document.querySelector('.chat-count');
+        chatCount.textContent = `Total Chats: ${pagination.total_chats}`;
+    }
+    
+    function updatePagination(pagination) {
+        const paginationContainer = document.querySelector('.pagination');
+        const paginationInfo = document.querySelector('.pagination-info');
+        
+        // Update info text
+        const startItem = ((pagination.current_page - 1) * pagination.per_page) + 1;
+        const endItem = Math.min(startItem + pagination.per_page - 1, pagination.total_chats);
+        paginationInfo.textContent = `Showing ${startItem} to ${endItem} of ${pagination.total_chats} chats`;
+        
+        // Generate pagination controls
+        let paginationHtml = '';
+        
+        // Previous button
+        paginationHtml += `
+            <li class="page-item ${pagination.current_page === 1 ? 'disabled' : ''}">
+                <a class="page-link" href="#" data-page="${pagination.current_page - 1}">Previous</a>
+            </li>
+        `;
+        
+        // Page numbers
+        for (let i = 1; i <= pagination.total_pages; i++) {
+            if (
+                i === 1 || // First page
+                i === pagination.total_pages || // Last page
+                (i >= pagination.current_page - 2 && i <= pagination.current_page + 2) // Pages around current
+            ) {
+                paginationHtml += `
+                    <li class="page-item ${i === pagination.current_page ? 'active' : ''}">
+                        <a class="page-link" href="#" data-page="${i}">${i}</a>
+                    </li>
+                `;
+            } else if (
+                i === pagination.current_page - 3 ||
+                i === pagination.current_page + 3
+            ) {
+                paginationHtml += `
+                    <li class="page-item disabled">
+                        <span class="page-link">...</span>
+                    </li>
+                `;
+            }
+        }
+        
+        // Next button
+        paginationHtml += `
+            <li class="page-item ${pagination.current_page === pagination.total_pages ? 'disabled' : ''}">
+                <a class="page-link" href="#" data-page="${pagination.current_page + 1}">Next</a>
+            </li>
+        `;
+        
+        paginationContainer.innerHTML = paginationHtml;
+        
+        // Add click handlers to pagination links
+        paginationContainer.querySelectorAll('.page-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const page = parseInt(this.dataset.page);
+                if (!isNaN(page) && page > 0 && page <= pagination.total_pages) {
+                    currentPage = page;
+                    loadChatHistory(currentPage);
+                }
+            });
+        });
+    }
+    
+    function displayChats(chats) {
+        chatHistory.innerHTML = '';
+        chats.forEach((chat, index) => {
+            const chatElement = createChatElement(chat, index);
+            chatHistory.appendChild(chatElement);
+        });
+    }
+    
+    function createChatElement(chat, index) {
+        const div = document.createElement('div');
+        div.className = 'accordion-item';
+        
+        const headerHtml = `
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#chat-${index}">
+                    <div class="d-flex justify-content-between w-100">
+                        <span>Chat between ${chat.user1.username} and ${chat.user2.username}</span>
+                        <small class="text-muted ms-3">
+                            ${moment.unix(chat.start_time).format('YYYY-MM-DD HH:mm')}
+                        </small>
+                    </div>
+                </button>
+            </h2>
+        `;
+        
+        let messagesHtml = '<div class="chat-messages p-3">';
+        chat.messages.forEach(msg => {
+            const timestamp = moment.unix(msg.timestamp).format('HH:mm:ss');
+            const isUser1 = msg.sender_id === chat.user1.id;
+            const alignClass = isUser1 ? 'start' : 'end';
+            const bgClass = isUser1 ? 'bg-light' : 'bg-primary text-white';
+            
+            messagesHtml += `
+                <div class="d-flex justify-content-${alignClass} mb-2">
+                    <div class="message ${bgClass} p-2 rounded" style="max-width: 70%;">
+                        <div class="message-header d-flex justify-content-between">
+                            <small class="sender">${msg.sender_username}</small>
+                            <small class="time ms-2">${timestamp}</small>
+                        </div>
+            `;
+            
+            // Handle different message types
+            if (msg.type === 'text') {
+                messagesHtml += `<div class="content mt-1">${msg.content}</div>`;
+            } else if (msg.media_info) {
+                const mediaInfo = msg.media_info;
+                
+                // Add preview based on media type
+                if (msg.type === 'photo') {
+                    messagesHtml += `
+                        <div class="media-preview mt-1">
+                            <img src="${mediaInfo.file_url}" class="img-thumbnail" style="max-width: 200px; cursor: pointer"
+                                 onclick="showMediaPreview('${mediaInfo.file_url}', 'photo')">
+                        </div>`;
+                } else if (msg.type === 'video') {
+                    messagesHtml += `
+                        <div class="media-preview mt-1">
+                            <video src="${mediaInfo.file_url}" controls style="max-width: 200px"></video>
+                        </div>`;
+                } else if (msg.type === 'voice' || msg.type === 'audio') {
+                    messagesHtml += `
+                        <div class="media-preview mt-1">
+                            <audio src="${mediaInfo.file_url}" controls></audio>
+                        </div>`;
+                } else if (msg.type === 'document') {
+                    messagesHtml += `
+                        <div class="media-preview mt-1">
+                            <a href="${mediaInfo.file_url}" target="_blank" class="btn btn-sm btn-secondary">
+                                <i class="fas fa-file"></i> ${mediaInfo.file_name || 'Download Document'}
+                            </a>
+                        </div>`;
+                }
+                
+                // Add caption if present
+                if (mediaInfo.caption) {
+                    messagesHtml += `<div class="caption mt-1"><small>${mediaInfo.caption}</small></div>`;
+                }
+            }
+            
+            messagesHtml += `</div></div>`;
+        });
+        messagesHtml += '</div>';
+        
+        div.innerHTML = `
+            ${headerHtml}
+            <div id="chat-${index}" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    ${messagesHtml}
+                </div>
+            </div>
+        `;
+        
+        return div;
+    }
+    
+    // Global function for showing media preview
+    window.showMediaPreview = function(url, type) {
+        const previewContent = document.getElementById('mediaPreviewContent');
+        
+        if (type === 'photo') {
+            previewContent.innerHTML = `<img src="${url}" class="img-fluid">`;
+        } else {
+            previewContent.innerHTML = `<div class="alert alert-info">Preview not available</div>`;
+        }
+        
+        mediaPreviewModal.show();
+    };
+});
+</script>
+
+<style>
+.chat-messages {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.message {
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.message-header {
+    opacity: 0.8;
+    font-size: 0.85em;
+}
+
+.media-preview {
+    max-width: 200px;
+}
+
+.media-preview img,
+.media-preview video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.media-preview audio {
+    width: 100%;
+}
+
+.pagination {
+    margin-bottom: 0;
+}
+
+.pagination-info {
+    font-size: 0.9em;
+}
+</style>
+{% endblock %} 

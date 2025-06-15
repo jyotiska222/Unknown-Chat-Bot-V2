@@ -1,0 +1,439 @@
+{% extends "base.html" %}
+
+{% block title %}Live Monitoring - Telegram Bot Admin{% endblock %}
+
+{% block header %}Live Monitoring{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Active Chats -->
+    <div class="col-lg-8">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                <h6 class="m-0 font-weight-bold text-primary">Active Chats</h6>
+                <div class="real-time-indicator">
+                    <span class="pulse"></span>
+                    <small class="text-muted ms-2">Live</small>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="activeChatsTable">
+                        <thead>
+                            <tr>
+                                <th>User 1</th>
+                                <th>User 2</th>
+                                <th>Duration</th>
+                                <th>Messages</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activeChatsBody">
+                            <!-- Active chats will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Real-time Stats -->
+    <div class="col-lg-4">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Real-time Statistics</h6>
+            </div>
+            <div class="card-body">
+                <div class="stats-container">
+                    <div class="stat-item mb-3">
+                        <h4 class="small font-weight-bold">Active Users <span class="float-end" id="activeUsers">0</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-success" id="activeUsersBar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-item mb-3">
+                        <h4 class="small font-weight-bold">Waiting Users <span class="float-end" id="waitingUsers">0</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-warning" id="waitingUsersBar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-item mb-3">
+                        <h4 class="small font-weight-bold">Messages/min <span class="float-end" id="messagesPerMin">0</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-info" id="messagesBar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <div class="activity-log">
+                    <h6 class="font-weight-bold">Recent Activity</h6>
+                    <div class="list-group list-group-flush" id="activityLog">
+                        <!-- Activity log will be updated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chat Details Modal -->
+<div class="modal fade" id="chatDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Chat Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-info mb-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong>User 1:</strong> <span id="modalUser1"></span></p>
+                            <p><strong>Gender:</strong> <span id="modalGender1"></span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>User 2:</strong> <span id="modalUser2"></span></p>
+                            <p><strong>Gender:</strong> <span id="modalGender2"></span></p>
+                        </div>
+                    </div>
+                    <p><strong>Started:</strong> <span id="modalStartTime"></span></p>
+                    <p><strong>Messages:</strong> <span id="modalMessageCount"></span></p>
+                </div>
+                <div class="chat-messages">
+                    <h6 class="font-weight-bold mb-3">Recent Messages</h6>
+                    <div class="list-group" id="modalMessageList">
+                        <!-- Messages will be loaded here -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="modalEndChat">End Chat</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Chat Confirmation Modal -->
+<div class="modal fade" id="endChatConfirmModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm End Chat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to end this chat?</p>
+                <p class="text-muted">This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="confirmEndChat">Yes, End Chat</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Socket.IO
+    const socket = io('/admin');
+    const messageCount = {
+        total: 0,
+        lastMinute: 0,
+        lastUpdate: Date.now()
+    };
+    const activeChats = new Map();
+    let selectedChatId = null;
+
+    // Initialize modals
+    const chatDetailsModal = new bootstrap.Modal(document.getElementById('chatDetailsModal'));
+    const endChatConfirmModal = new bootstrap.Modal(document.getElementById('endChatConfirmModal'));
+
+    // Connect to WebSocket
+    socket.on('connect', function() {
+        console.log('Connected to WebSocket');
+        // Request initial data
+        socket.emit('get_user_stats');
+    });
+
+    // Handle stats updates
+    socket.on('stats_update', function(data) {
+        // Update active users
+        document.getElementById('activeUsers').textContent = data.active_users;
+        document.getElementById('activeUsersBar').style.width = 
+            Math.min((data.active_users / data.total_users) * 100, 100) + '%';
+        
+        // Update waiting users
+        document.getElementById('waitingUsers').textContent = data.waiting_users;
+        document.getElementById('waitingUsersBar').style.width = 
+            Math.min((data.waiting_users / data.total_users) * 100, 100) + '%';
+    });
+
+    // Handle active chats updates
+    socket.on('active_chats', function(chats) {
+        activeChats.clear();
+        chats.forEach(chat => {
+            activeChats.set(chat.chat_id, {
+                username1: chat.username1,
+                username2: chat.username2,
+                gender1: chat.gender1,
+                gender2: chat.gender2,
+                start_time: chat.chat_start,
+                messages: chat.message_count || 0
+            });
+        });
+        updateChatsTable();
+    });
+
+    // Handle new messages
+    socket.on('new_message', function(data) {
+        messageCount.total++;
+        messageCount.lastMinute++;
+        
+        // Update messages per minute
+        const now = Date.now();
+        if (now - messageCount.lastUpdate >= 60000) {
+            document.getElementById('messagesPerMin').textContent = messageCount.lastMinute;
+            document.getElementById('messagesBar').style.width = Math.min(messageCount.lastMinute * 2, 100) + '%';
+            messageCount.lastMinute = 0;
+            messageCount.lastUpdate = now;
+        }
+        
+        // Update chat message count
+        if (activeChats.has(data.chat_id)) {
+            const chat = activeChats.get(data.chat_id);
+            chat.messages++;
+            updateChatRow(data.chat_id, chat);
+            
+            // Update modal if open
+            if (selectedChatId === data.chat_id) {
+                document.getElementById('modalMessageCount').textContent = chat.messages;
+                // Add message to modal list
+                const messageList = document.getElementById('modalMessageList');
+                const messageItem = document.createElement('div');
+                messageItem.className = 'list-group-item';
+                messageItem.innerHTML = `
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1">${data.from_user}</h6>
+                        <small>${moment().format('HH:mm:ss')}</small>
+                    </div>
+                    <p class="mb-1">${data.content || 'Media message'}</p>
+                `;
+                messageList.insertBefore(messageItem, messageList.firstChild);
+                
+                // Keep only last 10 messages
+                while (messageList.children.length > 10) {
+                    messageList.removeChild(messageList.lastChild);
+                }
+            }
+        }
+        
+        // Add to activity log
+        addActivityLog(`New message in chat from ${data.from_user}`);
+    });
+
+    function updateChatsTable() {
+        const tbody = document.getElementById('activeChatsBody');
+        tbody.innerHTML = '';
+        
+        activeChats.forEach((chat, chatId) => {
+            const duration = moment.duration(moment().diff(moment(chat.start_time * 1000)));
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${chat.username1}</td>
+                <td>${chat.username2}</td>
+                <td>${Math.floor(duration.asMinutes())} minutes</td>
+                <td>${chat.messages}</td>
+                <td>
+                    <button class="btn btn-sm btn-info view-chat" data-chat-id="${chatId}">
+                        <i class="fas fa-eye"></i> View
+                    </button>
+                    <button class="btn btn-sm btn-danger end-chat" data-chat-id="${chatId}">
+                        <i class="fas fa-times"></i> End
+                    </button>
+                </td>
+            `;
+            tbody.appendChild(row);
+        });
+
+        // Attach event listeners to new buttons
+        attachChatButtonListeners();
+    }
+
+    function attachChatButtonListeners() {
+        // View chat buttons
+        document.querySelectorAll('.view-chat').forEach(button => {
+            button.addEventListener('click', function() {
+                const chatId = this.dataset.chatId;
+                const chat = activeChats.get(chatId);
+                if (chat) {
+                    selectedChatId = chatId;
+                    document.getElementById('modalUser1').textContent = chat.username1;
+                    document.getElementById('modalUser2').textContent = chat.username2;
+                    document.getElementById('modalGender1').textContent = formatGender(chat.gender1);
+                    document.getElementById('modalGender2').textContent = formatGender(chat.gender2);
+                    document.getElementById('modalStartTime').textContent = moment(chat.start_time * 1000).format('YYYY-MM-DD HH:mm:ss');
+                    document.getElementById('modalMessageCount').textContent = chat.messages;
+                    
+                    // Clear previous messages
+                    document.getElementById('modalMessageList').innerHTML = '';
+                    
+                    // Load recent messages
+                    loadRecentMessages(chatId);
+                    
+                    chatDetailsModal.show();
+                }
+            });
+        });
+
+        // End chat buttons
+        document.querySelectorAll('.end-chat').forEach(button => {
+            button.addEventListener('click', function() {
+                selectedChatId = this.dataset.chatId;
+                endChatConfirmModal.show();
+            });
+        });
+    }
+
+    // Handle end chat confirmation
+    document.getElementById('confirmEndChat').addEventListener('click', async function() {
+        if (selectedChatId) {
+            try {
+                const response = await fetch('/admin/api/end_chat/' + selectedChatId, {
+                    method: 'POST'
+                });
+                
+                if (response.ok) {
+                    activeChats.delete(selectedChatId);
+                    updateChatsTable();
+                    addActivityLog('Chat ended by admin');
+                    endChatConfirmModal.hide();
+                    chatDetailsModal.hide();
+                } else {
+                    alert('Failed to end chat');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error ending chat');
+            }
+        }
+    });
+
+    // Modal end chat button
+    document.getElementById('modalEndChat').addEventListener('click', function() {
+        endChatConfirmModal.show();
+    });
+
+    async function loadRecentMessages(chatId) {
+        try {
+            const response = await fetch(`/admin/api/chat_messages/${chatId}`);
+            const messages = await response.json();
+            
+            const messageList = document.getElementById('modalMessageList');
+            messages.forEach(msg => {
+                const messageItem = document.createElement('div');
+                messageItem.className = 'list-group-item';
+                messageItem.innerHTML = `
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1">${msg.username}</h6>
+                        <small>${moment(msg.timestamp * 1000).format('HH:mm:ss')}</small>
+                    </div>
+                    <p class="mb-1">${msg.content || 'Media message'}</p>
+                `;
+                messageList.appendChild(messageItem);
+            });
+        } catch (error) {
+            console.error('Error loading messages:', error);
+        }
+    }
+
+    function formatGender(gender) {
+        switch(gender) {
+            case 'M': return '👨 Male';
+            case 'F': return '👩 Female';
+            case 'O': return '⭐ Other';
+            default: return '❓ Unknown';
+        }
+    }
+
+    function addActivityLog(message) {
+        const log = document.getElementById('activityLog');
+        const item = document.createElement('div');
+        item.className = 'list-group-item py-2';
+        item.innerHTML = `
+            <small class="text-muted">${moment().format('HH:mm:ss')}</small>
+            <span class="ms-2">${message}</span>
+        `;
+        log.insertBefore(item, log.firstChild);
+        
+        // Keep only last 10 items
+        while (log.children.length > 10) {
+            log.removeChild(log.lastChild);
+        }
+    }
+});
+</script>
+
+<style>
+.pulse {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #28a745;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(40, 167, 69, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+.activity-log {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.stat-item h4 {
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 10px;
+}
+
+.chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-body .list-group-item {
+    border-left: none;
+    border-right: none;
+}
+
+.modal-body .list-group-item:first-child {
+    border-top: none;
+}
+
+.modal-body .list-group-item:last-child {
+    border-bottom: none;
+}
+</style>
+{% endblock %} 

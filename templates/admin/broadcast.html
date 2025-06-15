@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}Broadcast Messages - Telegram Bot Admin{% endblock %}
+
+{% block header %}Broadcast Messages{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Broadcast Form -->
+    <div class="col-lg-8">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Send Broadcast Message</h6>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('admin.broadcast') }}">
+                    <div class="mb-3">
+                        <label for="target" class="form-label">Target Users</label>
+                        <select class="form-select" id="target" name="target" required>
+                            <option value="all">All Users</option>
+                            <option value="active">Active Users (In Chat)</option>
+                            <option value="waiting">Waiting Users</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        <div class="form-text">
+                            You can use HTML formatting tags like &lt;b&gt;, &lt;i&gt;, &lt;u&gt;, &lt;a href=""&gt;
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="preview" name="preview">
+                            <label class="form-check-label" for="preview">
+                                Preview message before sending
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Broadcast</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Broadcast History -->
+    <div class="col-lg-4">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Broadcast History</h6>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    {% for broadcast in broadcasts %}
+                    <div class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">{{ broadcast.target }}</h6>
+                            <small>{{ broadcast.timestamp|datetime }}</small>
+                        </div>
+                        <p class="mb-1">{{ broadcast.message }}</p>
+                        <small>Sent to {{ broadcast.sent_count }} users</small>
+                    </div>
+                    {% else %}
+                    <div class="text-center text-muted py-3">
+                        No broadcast history available
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Preview Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Message Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-container">
+                    <!-- Message preview will be shown here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                <button type="button" class="btn btn-primary" id="sendBroadcast">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const previewCheckbox = document.getElementById('preview');
+    const messageInput = document.getElementById('message');
+    const targetSelect = document.getElementById('target');
+    let previewModal;
+    
+    // Initialize modal
+    const modalElement = document.getElementById('previewModal');
+    if (modalElement) {
+        previewModal = new bootstrap.Modal(modalElement);
+    }
+    
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+        if (previewCheckbox.checked) {
+            e.preventDefault();
+            showPreview();
+        }
+    });
+    
+    // Show preview modal
+    function showPreview() {
+        const message = messageInput.value;
+        const target = targetSelect.options[targetSelect.selectedIndex].text;
+        
+        document.querySelector('.preview-container').innerHTML = `
+            <div class="preview-info mb-3">
+                <p><strong>Target:</strong> ${target}</p>
+            </div>
+            <div class="preview-message p-3 bg-light rounded">
+                ${message}
+            </div>
+        `;
+        
+        previewModal.show();
+    }
+    
+    // Handle send button in preview modal
+    document.getElementById('sendBroadcast')?.addEventListener('click', function() {
+        form.submit();
+    });
+    
+    // Live character count
+    messageInput.addEventListener('input', function() {
+        const maxLength = 4096;  // Telegram message limit
+        const remaining = maxLength - this.value.length;
+        
+        // Update character count if element exists
+        const countElement = document.getElementById('charCount');
+        if (countElement) {
+            countElement.textContent = `${remaining} characters remaining`;
+            countElement.classList.toggle('text-danger', remaining < 100);
+        }
+    });
+});
+</script>
+
+<style>
+.preview-message {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.form-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.list-group-item small {
+    color: #6c757d;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+</style>
+{% endblock %} 
