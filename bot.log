@@ -1401,3 +1401,70 @@ NameError: name 'request' is not defined
 2025-06-17 16:25:34,979 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
 2025-06-17 16:25:34,981 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
 2025-06-17 16:25:37,634 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet PING data None
+2025-06-17 16:30:59,452 - engineio.server - INFO - [base_server.py:112] - Server initialized for threading.
+2025-06-17 16:30:59,465 - __main__ - INFO - [app.py:218] - Starting polling thread...
+2025-06-17 16:30:59,489 - werkzeug - INFO - [_internal.py:187] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-17 16:30:59,489 - werkzeug - INFO - [_internal.py:187] - [33mPress CTRL+C to quit[0m
+2025-06-17 16:31:00,738 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet OPEN data {'sid': 'stvl3jDJgH050NEzAAAA', 'upgrades': ['websocket'], 'pingTimeout': 10000, 'pingInterval': 5000, 'maxPayload': 1000000}
+2025-06-17 16:31:00,741 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [17/Jun/2025 16:31:00] "GET /socket.io/?EIO=4&transport=polling&t=PTzZAof HTTP/1.1" 200 -
+2025-06-17 16:31:00,738 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet OPEN data {'sid': 'ODlrlpe5LYJh-WxRAAAB', 'upgrades': ['websocket'], 'pingTimeout': 10000, 'pingInterval': 5000, 'maxPayload': 1000000}
+2025-06-17 16:31:00,742 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [17/Jun/2025 16:31:00] "GET /socket.io/?EIO=4&transport=polling&t=PTzZAow HTTP/1.1" 200 -
+2025-06-17 16:31:00,777 - engineio.server - INFO - [socket.py:39] - stvl3jDJgH050NEzAAAA: Received packet MESSAGE data 0/admin,
+2025-06-17 16:31:00,787 - socketio.server - INFO - [server.py:164] - emitting event "connected" to yExj9SC0Jjh2tnP_AAAC [/admin]
+2025-06-17 16:31:00,779 - engineio.server - INFO - [socket.py:90] - ODlrlpe5LYJh-WxRAAAB: Received request to upgrade to websocket
+2025-06-17 16:31:00,789 - engineio.server - INFO - [socket.py:39] - ODlrlpe5LYJh-WxRAAAB: Received packet MESSAGE data 0/admin,
+2025-06-17 16:31:00,789 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet MESSAGE data 2/admin,["connected",{"data":"Connected to admin panel"}]
+2025-06-17 16:31:00,795 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [17/Jun/2025 16:31:00] "GET /socket.io/?EIO=4&transport=polling&t=PTzZApR&sid=stvl3jDJgH050NEzAAAA HTTP/1.1" 200 -
+2025-06-17 16:31:00,795 - socketio.server - INFO - [server.py:164] - emitting event "connected" to Q9cs8KTQMZJc2e0TAAAD [/admin]
+2025-06-17 16:31:00,799 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [17/Jun/2025 16:31:00] "GET /socket.io/?EIO=4&transport=polling&t=PTzZApR&sid=ODlrlpe5LYJh-WxRAAAB HTTP/1.1" 200 -
+2025-06-17 16:31:00,801 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet MESSAGE data 2/admin,["connected",{"data":"Connected to admin panel"}]
+2025-06-17 16:31:00,801 - socketio.server - INFO - [server.py:164] - emitting event "stats_update" to yExj9SC0Jjh2tnP_AAAC [/admin]
+2025-06-17 16:31:00,805 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet MESSAGE data 2/admin,["stats_update",{"total_users":80,"active_users":0,"waiting_users":0,"active_chats":0,"gender_stats":{"M":48,"F":8,"O":1},"hourly_activity":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]
+2025-06-17 16:31:00,807 - socketio.server - INFO - [server.py:164] - emitting event "stats_update" to Q9cs8KTQMZJc2e0TAAAD [/admin]
+2025-06-17 16:31:00,812 - engineio.server - INFO - [socket.py:90] - stvl3jDJgH050NEzAAAA: Received request to upgrade to websocket
+2025-06-17 16:31:00,810 - socketio.server - INFO - [server.py:164] - emitting event "active_chats" to yExj9SC0Jjh2tnP_AAAC [/admin]
+2025-06-17 16:31:00,816 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [17/Jun/2025 16:31:00] "GET /socket.io/?EIO=4&transport=polling&t=PTzZAq6&sid=stvl3jDJgH050NEzAAAA HTTP/1.1" 200 -
+2025-06-17 16:31:00,816 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet MESSAGE data 2/admin,["stats_update",{"total_users":80,"active_users":0,"waiting_users":0,"active_chats":0,"gender_stats":{"M":48,"F":8,"O":1},"hourly_activity":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]
+2025-06-17 16:31:00,820 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet MESSAGE data 2/admin,["active_chats",[]]
+2025-06-17 16:31:00,822 - socketio.server - INFO - [server.py:164] - emitting event "active_chats" to Q9cs8KTQMZJc2e0TAAAD [/admin]
+2025-06-17 16:31:00,824 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet MESSAGE data 0/admin,{"sid":"yExj9SC0Jjh2tnP_AAAC"}
+2025-06-17 16:31:00,824 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet MESSAGE data 2/admin,["active_chats",[]]
+2025-06-17 16:31:00,826 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [17/Jun/2025 16:31:00] "POST /socket.io/?EIO=4&transport=polling&t=PTzZApL&sid=stvl3jDJgH050NEzAAAA HTTP/1.1" 200 -
+2025-06-17 16:31:00,829 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet MESSAGE data 0/admin,{"sid":"Q9cs8KTQMZJc2e0TAAAD"}
+2025-06-17 16:31:00,832 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [17/Jun/2025 16:31:00] "POST /socket.io/?EIO=4&transport=polling&t=PTzZApM&sid=ODlrlpe5LYJh-WxRAAAB HTTP/1.1" 200 -
+2025-06-17 16:31:00,842 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [17/Jun/2025 16:31:00] "GET /socket.io/?EIO=4&transport=polling&t=PTzZAqX&sid=stvl3jDJgH050NEzAAAA HTTP/1.1" 200 -
+2025-06-17 16:31:00,843 - engineio.server - INFO - [socket.py:219] - ODlrlpe5LYJh-WxRAAAB: Upgrade to websocket successful
+2025-06-17 16:31:00,852 - engineio.server - INFO - [socket.py:219] - stvl3jDJgH050NEzAAAA: Upgrade to websocket successful
+2025-06-17 16:31:03,149 - bot.handlers - INFO - [handlers.py:116] - Chat command - User 1212235104 data: {'username': 'Red_6006', 'status': 'ready', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158063.133178, 'wait_start': 1750153802.345174, 'chat_start': 1750153792.4282951}
+2025-06-17 16:31:03,172 - bot.handlers - INFO - [handlers.py:102] - Finding partner for user 1212235104
+2025-06-17 16:31:03,176 - bot.handlers - INFO - [handlers.py:103] - Available waiting users: {'1212235104': {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158063.133178, 'wait_start': 1750158063.1494973, 'chat_start': 1750153792.4282951}}
+2025-06-17 16:31:05,038 - bot.handlers - INFO - [handlers.py:116] - Chat command - User 1212235104 data: {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158065.0158103, 'wait_start': 1750158063.1494973, 'chat_start': 1750153792.4282951}
+2025-06-17 16:31:05,038 - bot.handlers - INFO - [handlers.py:102] - Finding partner for user 1212235104
+2025-06-17 16:31:05,038 - bot.handlers - INFO - [handlers.py:103] - Available waiting users: {'1212235104': {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158065.0158103, 'wait_start': 1750158063.1494973, 'chat_start': 1750153792.4282951}}
+2025-06-17 16:31:05,551 - bot.utils - WARNING - [utils.py:29] - Rate limit exceeded for user 1212235104
+2025-06-17 16:31:05,741 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet PING data None
+2025-06-17 16:31:05,743 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet PING data None
+2025-06-17 16:31:05,743 - engineio.server - INFO - [socket.py:39] - stvl3jDJgH050NEzAAAA: Received packet PONG data 
+2025-06-17 16:31:05,746 - engineio.server - INFO - [socket.py:39] - ODlrlpe5LYJh-WxRAAAB: Received packet PONG data 
+2025-06-17 16:31:10,749 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet PING data None
+2025-06-17 16:31:10,749 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet PING data None
+2025-06-17 16:31:10,751 - engineio.server - INFO - [socket.py:39] - stvl3jDJgH050NEzAAAA: Received packet PONG data 
+2025-06-17 16:31:10,751 - engineio.server - INFO - [socket.py:39] - ODlrlpe5LYJh-WxRAAAB: Received packet PONG data 
+2025-06-17 16:31:15,755 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet PING data None
+2025-06-17 16:31:15,755 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet PING data None
+2025-06-17 16:31:15,757 - engineio.server - INFO - [socket.py:39] - stvl3jDJgH050NEzAAAA: Received packet PONG data 
+2025-06-17 16:31:15,758 - engineio.server - INFO - [socket.py:39] - ODlrlpe5LYJh-WxRAAAB: Received packet PONG data 
+2025-06-17 16:31:19,901 - bot.handlers - INFO - [handlers.py:116] - Chat command - User 1212235104 data: {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158079.8784218, 'wait_start': 1750158063.1494973, 'chat_start': 1750153792.4282951}
+2025-06-17 16:31:19,903 - bot.handlers - INFO - [handlers.py:102] - Finding partner for user 1212235104
+2025-06-17 16:31:19,903 - bot.handlers - INFO - [handlers.py:103] - Available waiting users: {'1212235104': {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158079.8784218, 'wait_start': 1750158063.1494973, 'chat_start': 1750153792.4282951}}
+2025-06-17 16:31:20,760 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet PING data None
+2025-06-17 16:31:20,761 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet PING data None
+2025-06-17 16:31:20,763 - engineio.server - INFO - [socket.py:39] - ODlrlpe5LYJh-WxRAAAB: Received packet PONG data 
+2025-06-17 16:31:20,763 - engineio.server - INFO - [socket.py:39] - stvl3jDJgH050NEzAAAA: Received packet PONG data 
+2025-06-17 16:31:25,765 - engineio.server - INFO - [socket.py:78] - ODlrlpe5LYJh-WxRAAAB: Sending packet PING data None
+2025-06-17 16:31:25,765 - engineio.server - INFO - [socket.py:78] - stvl3jDJgH050NEzAAAA: Sending packet PING data None
+2025-06-17 16:31:25,768 - engineio.server - INFO - [socket.py:39] - ODlrlpe5LYJh-WxRAAAB: Received packet PONG data 
+2025-06-17 16:31:25,768 - engineio.server - INFO - [socket.py:39] - stvl3jDJgH050NEzAAAA: Received packet PONG data 

@@ -10,9 +10,7 @@ import threading
 import traceback
 import requests
 from socket import gethostname
-import eventlet
 from functools import wraps
-eventlet.monkey_patch()
 
 from config import Config
 from bot.handlers import (
@@ -48,9 +46,9 @@ init_error_handlers(app)
 
 # Initialize socketio with the Flask app
 socketio.init_app(app,
-                async_mode='eventlet',
+                async_mode='threading',
                 cors_allowed_origins='*',
-                transport=['websocket', 'polling'],
+                transport=['polling'],
                 ping_timeout=10,
                 ping_interval=5)
 
