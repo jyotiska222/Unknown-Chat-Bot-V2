@@ -39,13 +39,13 @@ app = Flask(__name__)
 app.config.from_object(Config)
 Config.init_app(app)
 
-# Initialize socketio with long-polling for PythonAnywhere compatibility
-socketio = SocketIO(app, 
-                   async_mode='threading',
-                   cors_allowed_origins='*',
-                   transport=['polling'],
-                   ping_timeout=10,
-                   ping_interval=5)
+# Initialize socketio with the Flask app
+socketio.init_app(app,
+                async_mode='threading',
+                cors_allowed_origins='*',
+                transport=['polling'],
+                ping_timeout=10,
+                ping_interval=5)
 
 # Initialize Flask-Login
 login_manager = LoginManager()
@@ -424,19 +424,41 @@ def emit_stats_update():
         logger.error(f"Error emitting stats update: {e}")
         traceback.print_exc()
 
+@app.route(f'/{Config.BOT_TOKEN}', methods=['POST'])
+def webhook():
+    """Handle incoming webhook updates from Telegram."""
+    if request.method == 'POST':
+        update = request.get_json()
+        handle_update(update)
+        return 'ok'
+    return 'ok'
+
+def setup_webhook():
+    """Set up the webhook with Telegram."""
+    try:
+        webhook_url = f"{Config.WEBHOOK_URL}/{Config.BOT_TOKEN}"
+        response = requests.post(
+            f"{Config.TELEGRAM_API_URL}/setWebhook",
+            json={'url': webhook_url}
+        )
+        if response.status_code == 200 and response.json().get('ok'):
+            logger.info(f"Webhook set up successfully at {webhook_url}")
+        else:
+            logger.error(f"Failed to set up webhook: {response.text}")
+    except Exception as e:
+        logger.error(f"Error setting up webhook: {e}")
+
 if __name__ == '__main__':
     # Start cleanup thread
     cleanup_thread = threading.Thread(target=cleanup_inactive_users, daemon=True)
     cleanup_thread.start()
     
-    # Start polling thread
-    polling_thread = threading.Thread(target=polling_thread, daemon=True)
-    polling_thread.start()
-    
-    # Check if running on PythonAnywhere
+    # Set up webhook if running on PythonAnywhere
     if 'pythonanywhere' in gethostname():
-        # Running on PythonAnywhere - let WSGI handle the app
+        setup_webhook()
         application = app
     else:
-        # Running locally - use socketio
+        # Running locally - use polling
+        polling_thread = threading.Thread(target=polling_thread, daemon=True)
+        polling_thread.start()
         socketio.run(app, host='0.0.0.0', port=5000, debug=False) 

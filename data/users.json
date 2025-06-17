@@ -1,15 +1,15 @@
 {
   "6261300717": {
     "username": "jbiswas03",
-    "status": "chatting",
+    "status": "ready",
     "joined_at": 1749957772.330016,
-    "partner": "1212235104",
+    "partner": null,
     "gender": "M",
     "interest": "F",
     "banned": false,
-    "last_active": 1750151485.2033749,
-    "wait_start": 1750150962.8674788,
-    "chat_start": 1750150962.8818033,
+    "last_active": 1750153798.9138334,
+    "wait_start": 1750153782.4772236,
+    "chat_start": 1750153792.4302967,
     "connect_time": 1748201129.0450668
   },
   "7747443160": {
@@ -525,14 +525,14 @@
   },
   "1212235104": {
     "username": "Red_6006",
-    "status": "chatting",
+    "status": "waiting",
     "joined_at": 1750150889.9844255,
-    "partner": "6261300717",
+    "partner": null,
     "gender": "M",
     "interest": "F",
     "banned": false,
-    "last_active": 1750151548.1684983,
-    "wait_start": 1750150897.118784,
-    "chat_start": 1750150962.8922813
+    "last_active": 1750153802.3231757,
+    "wait_start": 1750153802.345174,
+    "chat_start": 1750153792.4282951
   }
 }

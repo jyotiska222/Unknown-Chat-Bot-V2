@@ -211,25 +211,16 @@ def handle_chat_command(user_id):
         telegram.send_message(user_id, "⏳ Looking for a chat partner... Please wait.\nI'll notify you when a match is found!")
 
 def handle_leave_command(user_id: str) -> None:
-    """Handle the /leave command to exit a chat."""
+    """Handle /leave command"""
     user = user_manager.get_user(user_id)
     if not user or not user.get('partner'):
-        telegram.send_message(user_id, "You're not in a chat right now.")
+        telegram.send_message(user_id, "You're not in a chat!")
         return
-
-    partner_id = str(user['partner'])
+    
+    partner_id = user.get('partner')
     partner = user_manager.get_user(partner_id)
     
-    # Emit chat ended event before updating user statuses
-    if partner:
-        chat_id = f"{min(str(user_id), str(partner_id))}_{max(str(user_id), str(partner_id))}"
-        socketio.emit('chat_ended', {
-            'chat_id': chat_id,
-            'username1': user.get('username', 'Unknown'),
-            'username2': partner.get('username', 'Unknown')
-        }, namespace='/admin')
-    
-    # Update both users
+    # Reset both users
     user['status'] = 'ready'
     user['partner'] = None
     user_manager.save_user(user_id, user)
@@ -238,11 +229,23 @@ def handle_leave_command(user_id: str) -> None:
         partner['status'] = 'ready'
         partner['partner'] = None
         user_manager.save_user(partner_id, partner)
-        
-        # Notify partner
-        telegram.send_message(partner_id, "❌ Your chat partner has left.\nUse /chat to find a new partner.")
+        telegram.send_message(partner_id, "❌ Your chat partner has left the chat.\nUse /chat to find a new partner!")
     
-    telegram.send_message(user_id, "You've left the chat.\nUse /chat to find a new partner.")
+    telegram.send_message(user_id, "❌ You've left the chat.\nUse /chat to find a new partner!")
+    
+    # Emit chat ended event only if socketio server is initialized
+    try:
+        if socketio and socketio.server:
+            chat_id = f"{min(str(user_id), str(partner_id))}_{max(str(user_id), str(partner_id))}"
+            socketio.emit('chat_ended', {
+                'chat_id': chat_id,
+                'username1': user.get('username', 'Unknown'),
+                'username2': partner.get('username', 'Unknown') if partner else 'Unknown',
+                'end_time': time.time()
+            }, namespace='/admin')
+    except Exception as e:
+        logger.warning(f"Failed to emit chat_ended event: {e}")
+        # Continue normally as this is not critical for the chat functionality
 
 def handle_message(user_id, message_data):
     """Handle regular chat messages"""

@@ -1016,3 +1016,94 @@ NameError: name 'emit' is not defined
 2025-06-17 14:21:27,503 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:27] "POST /socket.io/?EIO=4&transport=polling&t=PTz5X22&sid=9NO_h27HV6KUMZg5AAAI HTTP/1.1" 200 -
 2025-06-17 14:21:27,504 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:27] "GET /socket.io/?EIO=4&transport=polling&t=PTz5X23&sid=9NO_h27HV6KUMZg5AAAI HTTP/1.1" 200 -
 2025-06-17 14:21:27,540 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:27] "GET /socket.io/?EIO=4&transport=polling&t=PTz5X2j&sid=9NO_h27HV6KUMZg5AAAI HTTP/1.1" 200 -
+2025-06-17 15:14:43,607 - __main__ - INFO - Starting polling thread...
+2025-06-17 15:14:43,621 - __main__ - ERROR - Cleanup error: 'NoneType' object has no attribute 'emit'
+2025-06-17 15:14:43,636 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-17 15:14:43,639 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 15:14:44,733 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:14:44] "GET /socket.io/?EIO=4&transport=polling&t=PTzHjcn HTTP/1.1" 200 -
+2025-06-17 15:14:44,759 - bot.utils - ERROR - Error loading data\chats.json: Expecting value: line 1 column 1 (char 0)
+2025-06-17 15:14:44,761 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:14:44] "POST /socket.io/?EIO=4&transport=polling&t=PTzHjdC&sid=cVKULqS3QI7toBz7AAAA HTTP/1.1" 200 -
+2025-06-17 15:14:44,765 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:14:44] "GET /socket.io/?EIO=4&transport=polling&t=PTzHjdJ&sid=cVKULqS3QI7toBz7AAAA HTTP/1.1" 200 -
+2025-06-17 15:14:44,785 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:14:44] "GET /socket.io/?EIO=4&transport=polling&t=PTzHjdh&sid=cVKULqS3QI7toBz7AAAA HTTP/1.1" 200 -
+2025-06-17 15:14:45,079 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '1212235104', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153485.0585673, 'wait_start': 1750150962.8674788, 'chat_start': 1750150962.8818033, 'connect_time': 1748201129.0450668}
+2025-06-17 15:14:45,081 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'emit'
+2025-06-17 15:14:45,102 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'emit'
+2025-06-17 15:14:45,122 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '1212235104', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153485.1055658, 'wait_start': 1750150962.8674788, 'chat_start': 1750150962.8818033, 'connect_time': 1748201129.0450668}
+2025-06-17 15:14:45,124 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'emit'
+2025-06-17 15:14:59,151 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '1212235104', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153499.1140773, 'wait_start': 1750150962.8674788, 'chat_start': 1750150962.8818033, 'connect_time': 1748201129.0450668}
+2025-06-17 15:14:59,153 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'emit'
+2025-06-17 15:16:01,232 - __main__ - INFO - Starting polling thread...
+2025-06-17 15:16:01,252 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-17 15:16:01,253 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 15:16:01,497 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:16:01] "GET /socket.io/?EIO=4&transport=polling&t=PTzI0AF HTTP/1.1" 200 -
+2025-06-17 15:16:01,537 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:16:01] "GET /socket.io/?EIO=4&transport=polling&t=PTzI0Mq&sid=cjRCCD8ujMgQIOhbAAAA HTTP/1.1" 200 -
+2025-06-17 15:16:01,539 - bot.utils - ERROR - Error loading data\chats.json: Expecting value: line 1 column 1 (char 0)
+2025-06-17 15:16:01,540 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:16:01] "POST /socket.io/?EIO=4&transport=polling&t=PTzI0MZ&sid=cjRCCD8ujMgQIOhbAAAA HTTP/1.1" 200 -
+2025-06-17 15:17:27,725 - __main__ - INFO - Starting polling thread...
+2025-06-17 15:17:27,752 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-17 15:17:27,753 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 15:17:29,725 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:17:29] "GET /socket.io/?EIO=4&transport=polling&t=PTzILut HTTP/1.1" 200 -
+2025-06-17 15:17:29,751 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:17:29] "GET /socket.io/?EIO=4&transport=polling&t=PTzILv7&sid=IQdKUamgKr4oookiAAAA HTTP/1.1" 200 -
+2025-06-17 15:17:29,754 - bot.utils - ERROR - Error loading data\chats.json: Expecting value: line 1 column 1 (char 0)
+2025-06-17 15:17:29,755 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:17:29] "POST /socket.io/?EIO=4&transport=polling&t=PTzILv5&sid=IQdKUamgKr4oookiAAAA HTTP/1.1" 200 -
+2025-06-17 15:17:38,560 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '1212235104', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153658.5263324, 'wait_start': 1750150962.8674788, 'chat_start': 1750150962.8818033, 'connect_time': 1748201129.0450668}
+2025-06-17 15:17:38,563 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'emit'
+2025-06-17 15:17:49,075 - __main__ - ERROR - Update handling error: 'NoneType' object has no attribute 'emit'
+2025-06-17 15:19:37,659 - engineio.server - INFO - Server initialized for threading.
+2025-06-17 15:19:37,668 - __main__ - INFO - Starting polling thread...
+2025-06-17 15:19:37,690 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-17 15:19:37,691 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 15:19:37,771 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet OPEN data {'sid': 'i6NHgbxFdsPxacFOAAAA', 'upgrades': ['websocket'], 'pingTimeout': 10000, 'pingInterval': 5000, 'maxPayload': 1000000}
+2025-06-17 15:19:37,772 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:19:37] "GET /socket.io/?EIO=4&transport=polling&t=PTzIqff HTTP/1.1" 200 -
+2025-06-17 15:19:37,790 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Received packet MESSAGE data 0/admin,
+2025-06-17 15:19:37,791 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Received request to upgrade to websocket
+2025-06-17 15:19:37,796 - socketio.server - INFO - emitting event "connected" to KyvfaNZJHBK4xuEiAAAB [/admin]
+2025-06-17 15:19:37,800 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:19:37] "GET /socket.io/?EIO=4&transport=polling&t=PTzIr9r&sid=i6NHgbxFdsPxacFOAAAA HTTP/1.1" 200 -
+2025-06-17 15:19:37,799 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet MESSAGE data 2/admin,["connected",{"data":"Connected to admin panel"}]
+2025-06-17 15:19:37,806 - bot.utils - ERROR - Error loading data\chats.json: Expecting value: line 1 column 1 (char 0)
+2025-06-17 15:19:37,807 - socketio.server - INFO - emitting event "stats_update" to KyvfaNZJHBK4xuEiAAAB [/admin]
+2025-06-17 15:19:37,808 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet MESSAGE data 2/admin,["stats_update",{"total_users":80,"active_users":1,"waiting_users":0,"active_chats":1,"gender_stats":{"M":48,"F":8,"O":1},"hourly_activity":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]
+2025-06-17 15:19:37,809 - socketio.server - INFO - emitting event "active_chats" to KyvfaNZJHBK4xuEiAAAB [/admin]
+2025-06-17 15:19:37,810 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet MESSAGE data 2/admin,["active_chats",[{"chat_id":"1212235104_6261300717","username1":"jbiswas03","username2":"Red_6006","gender1":"M","gender2":"M","chat_start":1750150962.8818033,"message_count":0}]]
+2025-06-17 15:19:37,811 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet MESSAGE data 0/admin,{"sid":"KyvfaNZJHBK4xuEiAAAB"}
+2025-06-17 15:19:37,812 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:19:37] "POST /socket.io/?EIO=4&transport=polling&t=PTzIr9q&sid=i6NHgbxFdsPxacFOAAAA HTTP/1.1" 200 -
+2025-06-17 15:19:37,813 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 15:19:37] "GET /socket.io/?EIO=4&transport=polling&t=PTzIrAE&sid=i6NHgbxFdsPxacFOAAAA HTTP/1.1" 200 -
+2025-06-17 15:19:37,820 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Upgrade to websocket successful
+2025-06-17 15:19:40,515 - bot.handlers - INFO - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'chatting', 'joined_at': 1749957772.330016, 'partner': '1212235104', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153780.496038, 'wait_start': 1750150962.8674788, 'chat_start': 1750150962.8818033, 'connect_time': 1748201129.0450668}
+2025-06-17 15:19:42,474 - socketio.server - INFO - emitting event "chat_ended" to all [/admin]
+2025-06-17 15:19:42,476 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet MESSAGE data 2/admin,["chat_ended",{"chat_id":"1212235104_6261300717","username1":"jbiswas03","username2":"Red_6006","end_time":1750153782.4747736}]
+2025-06-17 15:19:42,506 - bot.handlers - INFO - Finding partner for user 6261300717
+2025-06-17 15:19:42,507 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': '1212235104', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153780.496038, 'wait_start': 1750153782.4772236, 'chat_start': 1750150962.8818033, 'connect_time': 1748201129.0450668}}
+2025-06-17 15:19:42,773 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet PING data None
+2025-06-17 15:19:42,774 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Received packet PONG data 
+2025-06-17 15:19:47,776 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet PING data None
+2025-06-17 15:19:47,777 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Received packet PONG data 
+2025-06-17 15:19:52,404 - bot.handlers - INFO - Chat command - User 1212235104 data: {'username': 'Red_6006', 'status': 'ready', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153792.3802967, 'wait_start': 1750150897.118784, 'chat_start': 1750150962.8922813}
+2025-06-17 15:19:52,425 - bot.handlers - INFO - Finding partner for user 1212235104
+2025-06-17 15:19:52,426 - bot.handlers - INFO - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': '1212235104', 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153780.496038, 'wait_start': 1750153782.4772236, 'chat_start': 1750150962.8818033, 'connect_time': 1748201129.0450668}, '1212235104': {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153792.3802967, 'wait_start': 1750153792.4052908, 'chat_start': 1750150962.8922813}}
+2025-06-17 15:19:52,427 - bot.handlers - INFO - Found random partner: 6261300717
+2025-06-17 15:19:52,779 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet PING data None
+2025-06-17 15:19:52,780 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Received packet PONG data 
+2025-06-17 15:19:53,216 - socketio.server - INFO - emitting event "chat_started" to all [/admin]
+2025-06-17 15:19:53,217 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet MESSAGE data 2/admin,["chat_started",{"chat_id":"1212235104_6261300717","username1":"Red_6006","username2":"jbiswas03","gender1":"M","gender2":"M","chat_start":1750153793.21696,"message_count":0}]
+2025-06-17 15:19:57,782 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet PING data None
+2025-06-17 15:19:57,784 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Received packet PONG data 
+2025-06-17 15:19:59,721 - socketio.server - INFO - emitting event "chat_ended" to all [/admin]
+2025-06-17 15:19:59,722 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet MESSAGE data 2/admin,["chat_ended",{"chat_id":"1212235104_6261300717","username1":"jbiswas03","username2":"Red_6006","end_time":1750153799.7218897}]
+2025-06-17 15:20:02,344 - bot.handlers - INFO - Chat command - User 1212235104 data: {'username': 'Red_6006', 'status': 'ready', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153802.3231757, 'wait_start': 1750153792.4052908, 'chat_start': 1750153792.4282951}
+2025-06-17 15:20:02,366 - bot.handlers - INFO - Finding partner for user 1212235104
+2025-06-17 15:20:02,367 - bot.handlers - INFO - Available waiting users: {'1212235104': {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153802.3231757, 'wait_start': 1750153802.345174, 'chat_start': 1750153792.4282951}}
+2025-06-17 15:20:02,786 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet PING data None
+2025-06-17 15:20:02,787 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Received packet PONG data 
