@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, redirect, url_for, flash
+from flask import Flask, request, jsonify, render_template, redirect, url_for, flash, g
 from flask_socketio import SocketIO, emit
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import os
@@ -11,6 +11,7 @@ import traceback
 import requests
 from socket import gethostname
 import eventlet
+from functools import wraps
 eventlet.monkey_patch()
 
 from config import Config
@@ -24,11 +25,12 @@ from bot.handlers import (
 from bot.utils import TelegramAPI, UserManager, ChatManager, TelegramError
 from admin.routes import admin
 from bot.shared import socketio
+from error_handlers import init_error_handlers, APIError
 
-# Configure logging
+# Configure logging with more detailed format
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    format='%(asctime)s - %(name)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s',
     handlers=[
         logging.FileHandler('bot.log'),
         logging.StreamHandler()
@@ -40,6 +42,9 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 app.config.from_object(Config)
 Config.init_app(app)
+
+# Initialize error handlers
+init_error_handlers(app)
 
 # Initialize socketio with the Flask app
 socketio.init_app(app,
@@ -426,14 +431,76 @@ def emit_stats_update():
         logger.error(f"Error emitting stats update: {e}")
         traceback.print_exc()
 
+def validate_json(*required_fields):
+    """Decorator to validate JSON payload"""
+    def decorator(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            if not request.is_json:
+                raise APIError("Content-Type must be application/json", 400)
+            
+            data = request.get_json()
+            if not data:
+                raise APIError("No JSON data provided", 400)
+            
+            missing_fields = [field for field in required_fields if field not in data]
+            if missing_fields:
+                raise APIError(f"Missing required fields: {', '.join(missing_fields)}", 400)
+            
+            return f(*args, **kwargs)
+        return decorated_function
+    return decorator
+
+@app.before_request
+def before_request():
+    """Log request details and set up request context"""
+    g.start_time = time.time()
+    logger.info(f"Request started: {request.method} {request.path}")
+    logger.debug(f"Request headers: {dict(request.headers)}")
+    if request.is_json:
+        logger.debug(f"Request JSON: {request.get_json()}")
+
+@app.after_request
+def after_request(response):
+    """Log response details"""
+    duration = time.time() - g.start_time
+    logger.info(f"Request completed: {request.method} {request.path} - Status: {response.status_code} - Duration: {duration:.2f}s")
+    return response
+
+@app.route('/health')
+def health_check():
+    """Health check endpoint"""
+    try:
+        # Check database/storage access
+        user_manager.get_all_users()
+        # Check Telegram API access
+        telegram.get_me()
+        return jsonify({
+            'status': 'healthy',
+            'timestamp': datetime.now().isoformat(),
+            'version': os.getenv('APP_VERSION', '1.0.0')
+        })
+    except Exception as e:
+        logger.error(f"Health check failed: {e}")
+        return jsonify({
+            'status': 'unhealthy',
+            'error': str(e),
+            'timestamp': datetime.now().isoformat()
+        }), 500
+
 @app.route(f'/{Config.BOT_TOKEN}', methods=['POST'])
+@validate_json()
 def webhook():
-    """Handle incoming webhook updates from Telegram."""
-    if request.method == 'POST':
+    """Handle incoming webhook updates from Telegram with validation"""
+    try:
         update = request.get_json()
         handle_update(update)
         return 'ok'
-    return 'ok'
+    except Exception as e:
+        logger.error(f"Error processing webhook: {e}")
+        logger.error(traceback.format_exc())
+        # Don't expose internal errors to Telegram
+        return 'ok'
 
 def setup_webhook():
     """Set up the webhook with Telegram."""
