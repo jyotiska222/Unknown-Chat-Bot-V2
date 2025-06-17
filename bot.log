@@ -1107,3 +1107,297 @@ NameError: name 'emit' is not defined
 2025-06-17 15:20:02,367 - bot.handlers - INFO - Available waiting users: {'1212235104': {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150889.9844255, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750153802.3231757, 'wait_start': 1750153802.345174, 'chat_start': 1750153792.4282951}}
 2025-06-17 15:20:02,786 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Sending packet PING data None
 2025-06-17 15:20:02,787 - engineio.server - INFO - i6NHgbxFdsPxacFOAAAA: Received packet PONG data 
+2025-06-17 16:23:39,583 - engineio.server - INFO - [base_server.py:112] - Server initialized for eventlet.
+2025-06-17 16:23:39,602 - __main__ - INFO - [app.py:142] - Reset inactive waiting user 1212235104
+2025-06-17 16:23:39,604 - __main__ - INFO - [app.py:220] - Starting polling thread...
+2025-06-17 16:23:39,737 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet OPEN data {'sid': 'Z6cgO3WNaDRSleIjAAAA', 'upgrades': ['websocket'], 'pingTimeout': 10000, 'pingInterval': 5000, 'maxPayload': 1000000}
+2025-06-17 16:23:39,752 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet MESSAGE data 0/admin,
+2025-06-17 16:23:39,760 - socketio.server - INFO - [server.py:164] - emitting event "connected" to kkVpgp0GpiHpWiv0AAAB [/admin]
+2025-06-17 16:23:39,760 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet MESSAGE data 2/admin,["connected",{"data":"Connected to admin panel"}]
+2025-06-17 16:23:39,784 - socketio.server - INFO - [server.py:164] - emitting event "stats_update" to kkVpgp0GpiHpWiv0AAAB [/admin]
+2025-06-17 16:23:39,784 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet MESSAGE data 2/admin,["stats_update",{"total_users":80,"active_users":0,"waiting_users":0,"active_chats":0,"gender_stats":{"M":48,"F":8,"O":1},"hourly_activity":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]
+2025-06-17 16:23:39,784 - socketio.server - INFO - [server.py:164] - emitting event "active_chats" to kkVpgp0GpiHpWiv0AAAB [/admin]
+2025-06-17 16:23:39,792 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet MESSAGE data 2/admin,["active_chats",[]]
+2025-06-17 16:23:39,792 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet MESSAGE data 0/admin,{"sid":"kkVpgp0GpiHpWiv0AAAB"}
+2025-06-17 16:23:39,792 - engineio.server - INFO - [socket.py:90] - Z6cgO3WNaDRSleIjAAAA: Received request to upgrade to websocket
+2025-06-17 16:23:39,808 - engineio.server - INFO - [socket.py:219] - Z6cgO3WNaDRSleIjAAAA: Upgrade to websocket successful
+2025-06-17 16:23:44,750 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:23:44,753 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:23:49,762 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:23:49,776 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:23:49,937 - urllib3.connectionpool - WARNING - [connectionpool.py:824] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C208410>: Failed to establish a new connection: [Errno 11002] Lookup timed out')': /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates
+2025-06-17 16:23:54,770 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:23:54,772 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:23:59,776 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:23:59,776 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:01,265 - urllib3.connectionpool - WARNING - [connectionpool.py:824] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C2283D0>: Failed to establish a new connection: [Errno 11002] Lookup timed out')': /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates
+2025-06-17 16:24:04,780 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:04,780 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:09,793 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:09,796 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:13,605 - urllib3.connectionpool - WARNING - [connectionpool.py:824] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C22A350>: Failed to establish a new connection: [Errno 11002] Lookup timed out')': /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates
+2025-06-17 16:24:14,809 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:14,811 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:19,825 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:19,828 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:23,909 - bot.utils - ERROR - [utils.py:237] - Request error on attempt 1 for getUpdates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C240290>: Failed to establish a new connection: [Errno 11002] Lookup timed out'))
+2025-06-17 16:24:24,835 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:24,838 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:29,774 - __main__ - INFO - [app.py:458] - Request started: GET /
+2025-06-17 16:24:29,792 - __main__ - INFO - [app.py:467] - Request completed: GET / - Status: 200 - Duration: 0.02s
+2025-06-17 16:24:29,842 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:29,844 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:30,622 - __main__ - INFO - [app.py:458] - Request started: GET /favicon.ico
+2025-06-17 16:24:30,622 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-17 16:24:30,692 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-17 16:24:30,694 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-17 16:24:34,853 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:34,855 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:39,213 - urllib3.connectionpool - WARNING - [connectionpool.py:824] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C229290>: Failed to establish a new connection: [Errno 11002] Lookup timed out')': /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates
+2025-06-17 16:24:39,846 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:39,850 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:43,485 - __main__ - INFO - [app.py:458] - Request started: GET /login
+2025-06-17 16:24:43,485 - __main__ - INFO - [app.py:467] - Request completed: GET /login - Status: 302 - Duration: 0.00s
+2025-06-17 16:24:43,503 - __main__ - INFO - [app.py:458] - Request started: GET /admin/dashboard
+2025-06-17 16:24:43,531 - __main__ - INFO - [app.py:467] - Request completed: GET /admin/dashboard - Status: 200 - Duration: 0.03s
+2025-06-17 16:24:44,102 - engineio.server - INFO - [socket.py:78] - s3JCpFj9kqYc64ZlAAAC: Sending packet OPEN data {'sid': 's3JCpFj9kqYc64ZlAAAC', 'upgrades': ['websocket'], 'pingTimeout': 10000, 'pingInterval': 5000, 'maxPayload': 1000000}
+2025-06-17 16:24:44,188 - engineio.server - INFO - [socket.py:39] - s3JCpFj9kqYc64ZlAAAC: Received packet MESSAGE data 0/admin,
+2025-06-17 16:24:44,192 - socketio.server - INFO - [server.py:164] - emitting event "connected" to YOPS-X18VBFvlTC4AAAD [/admin]
+2025-06-17 16:24:44,192 - engineio.server - INFO - [socket.py:78] - s3JCpFj9kqYc64ZlAAAC: Sending packet MESSAGE data 2/admin,["connected",{"data":"Connected to admin panel"}]
+2025-06-17 16:24:44,195 - socketio.server - INFO - [server.py:164] - emitting event "stats_update" to YOPS-X18VBFvlTC4AAAD [/admin]
+2025-06-17 16:24:44,195 - engineio.server - INFO - [socket.py:78] - s3JCpFj9kqYc64ZlAAAC: Sending packet MESSAGE data 2/admin,["stats_update",{"total_users":80,"active_users":0,"waiting_users":0,"active_chats":0,"gender_stats":{"M":48,"F":8,"O":1},"hourly_activity":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]
+2025-06-17 16:24:44,195 - socketio.server - INFO - [server.py:164] - emitting event "active_chats" to YOPS-X18VBFvlTC4AAAD [/admin]
+2025-06-17 16:24:44,195 - engineio.server - INFO - [socket.py:78] - s3JCpFj9kqYc64ZlAAAC: Sending packet MESSAGE data 2/admin,["active_chats",[]]
+2025-06-17 16:24:44,199 - engineio.server - INFO - [socket.py:78] - s3JCpFj9kqYc64ZlAAAC: Sending packet MESSAGE data 0/admin,{"sid":"YOPS-X18VBFvlTC4AAAD"}
+2025-06-17 16:24:44,200 - engineio.server - INFO - [socket.py:90] - s3JCpFj9kqYc64ZlAAAC: Received request to upgrade to websocket
+2025-06-17 16:24:44,280 - engineio.server - INFO - [socket.py:219] - s3JCpFj9kqYc64ZlAAAC: Upgrade to websocket successful
+2025-06-17 16:24:44,858 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:44,861 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:49,106 - engineio.server - INFO - [socket.py:78] - s3JCpFj9kqYc64ZlAAAC: Sending packet PING data None
+2025-06-17 16:24:49,106 - engineio.server - INFO - [socket.py:39] - s3JCpFj9kqYc64ZlAAAC: Received packet PONG data 
+2025-06-17 16:24:49,862 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:49,865 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:49,962 - __main__ - INFO - [app.py:458] - Request started: GET /admin/monitoring
+2025-06-17 16:24:49,978 - __main__ - INFO - [app.py:467] - Request completed: GET /admin/monitoring - Status: 200 - Duration: 0.02s
+2025-06-17 16:24:50,303 - engineio.server - INFO - [socket.py:78] - vnRNQhGHuZ9bqnH1AAAE: Sending packet OPEN data {'sid': 'vnRNQhGHuZ9bqnH1AAAE', 'upgrades': ['websocket'], 'pingTimeout': 10000, 'pingInterval': 5000, 'maxPayload': 1000000}
+2025-06-17 16:24:50,342 - engineio.server - INFO - [socket.py:90] - vnRNQhGHuZ9bqnH1AAAE: Received request to upgrade to websocket
+2025-06-17 16:24:50,342 - engineio.server - INFO - [socket.py:39] - vnRNQhGHuZ9bqnH1AAAE: Received packet MESSAGE data 0/admin,
+2025-06-17 16:24:50,354 - socketio.server - INFO - [server.py:164] - emitting event "connected" to RyzHrwZHuBVc1-ZTAAAF [/admin]
+2025-06-17 16:24:50,354 - engineio.server - INFO - [socket.py:78] - vnRNQhGHuZ9bqnH1AAAE: Sending packet MESSAGE data 2/admin,["connected",{"data":"Connected to admin panel"}]
+2025-06-17 16:24:50,359 - socketio.server - INFO - [server.py:164] - emitting event "stats_update" to RyzHrwZHuBVc1-ZTAAAF [/admin]
+2025-06-17 16:24:50,361 - engineio.server - INFO - [socket.py:78] - vnRNQhGHuZ9bqnH1AAAE: Sending packet MESSAGE data 2/admin,["stats_update",{"total_users":80,"active_users":0,"waiting_users":0,"active_chats":0,"gender_stats":{"M":48,"F":8,"O":1},"hourly_activity":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]
+2025-06-17 16:24:50,361 - socketio.server - INFO - [server.py:164] - emitting event "active_chats" to RyzHrwZHuBVc1-ZTAAAF [/admin]
+2025-06-17 16:24:50,363 - engineio.server - INFO - [socket.py:78] - vnRNQhGHuZ9bqnH1AAAE: Sending packet MESSAGE data 2/admin,["active_chats",[]]
+2025-06-17 16:24:50,363 - engineio.server - INFO - [socket.py:78] - vnRNQhGHuZ9bqnH1AAAE: Sending packet MESSAGE data 0/admin,{"sid":"RyzHrwZHuBVc1-ZTAAAF"}
+2025-06-17 16:24:50,508 - urllib3.connectionpool - WARNING - [connectionpool.py:824] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C297190>: Failed to establish a new connection: [Errno 11002] Lookup timed out')': /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates
+2025-06-17 16:24:50,516 - engineio.server - INFO - [socket.py:219] - vnRNQhGHuZ9bqnH1AAAE: Upgrade to websocket successful
+2025-06-17 16:24:50,551 - engineio.server - INFO - [socket.py:39] - vnRNQhGHuZ9bqnH1AAAE: Received packet MESSAGE data 2/admin,["get_user_stats"]
+2025-06-17 16:24:50,554 - socketio.server - INFO - [server.py:576] - received event "get_user_stats" from RyzHrwZHuBVc1-ZTAAAF [/admin]
+2025-06-17 16:24:53,904 - __main__ - INFO - [app.py:458] - Request started: GET /admin/users
+2025-06-17 16:24:53,933 - __main__ - INFO - [app.py:467] - Request completed: GET /admin/users - Status: 200 - Duration: 0.03s
+2025-06-17 16:24:54,865 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:54,865 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:24:59,878 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:24:59,880 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:25:02,806 - urllib3.connectionpool - WARNING - [connectionpool.py:824] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C2DEF10>: Failed to establish a new connection: [Errno 11002] Lookup timed out')': /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates
+2025-06-17 16:25:04,875 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:25:04,878 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:25:06,115 - __main__ - INFO - [app.py:458] - Request started: GET /admin/chat-history
+2025-06-17 16:25:06,124 - __main__ - INFO - [app.py:467] - Request completed: GET /admin/chat-history - Status: 200 - Duration: 0.01s
+2025-06-17 16:25:06,404 - __main__ - INFO - [app.py:458] - Request started: GET /api/chat-history
+2025-06-17 16:25:06,404 - app - ERROR - [app.py:1414] - Exception on /api/chat-history [GET]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-17 16:25:06,409 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-17 16:25:06,414 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-17 16:25:08,201 - __main__ - INFO - [app.py:458] - Request started: GET /admin/monitoring
+2025-06-17 16:25:08,201 - __main__ - INFO - [app.py:467] - Request completed: GET /admin/monitoring - Status: 200 - Duration: 0.00s
+2025-06-17 16:25:08,555 - engineio.server - INFO - [socket.py:78] - 3H9ZhtJ1kD_ZxVLTAAAG: Sending packet OPEN data {'sid': '3H9ZhtJ1kD_ZxVLTAAAG', 'upgrades': ['websocket'], 'pingTimeout': 10000, 'pingInterval': 5000, 'maxPayload': 1000000}
+2025-06-17 16:25:08,579 - engineio.server - INFO - [socket.py:39] - 3H9ZhtJ1kD_ZxVLTAAAG: Received packet MESSAGE data 0/admin,
+2025-06-17 16:25:08,584 - socketio.server - INFO - [server.py:164] - emitting event "connected" to z0E-mP5pd2LZFCy2AAAH [/admin]
+2025-06-17 16:25:08,584 - engineio.server - INFO - [socket.py:78] - 3H9ZhtJ1kD_ZxVLTAAAG: Sending packet MESSAGE data 2/admin,["connected",{"data":"Connected to admin panel"}]
+2025-06-17 16:25:08,588 - socketio.server - INFO - [server.py:164] - emitting event "stats_update" to z0E-mP5pd2LZFCy2AAAH [/admin]
+2025-06-17 16:25:08,591 - engineio.server - INFO - [socket.py:78] - 3H9ZhtJ1kD_ZxVLTAAAG: Sending packet MESSAGE data 2/admin,["stats_update",{"total_users":80,"active_users":0,"waiting_users":0,"active_chats":0,"gender_stats":{"M":48,"F":8,"O":1},"hourly_activity":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]
+2025-06-17 16:25:08,592 - socketio.server - INFO - [server.py:164] - emitting event "active_chats" to z0E-mP5pd2LZFCy2AAAH [/admin]
+2025-06-17 16:25:08,595 - engineio.server - INFO - [socket.py:78] - 3H9ZhtJ1kD_ZxVLTAAAG: Sending packet MESSAGE data 2/admin,["active_chats",[]]
+2025-06-17 16:25:08,596 - engineio.server - INFO - [socket.py:78] - 3H9ZhtJ1kD_ZxVLTAAAG: Sending packet MESSAGE data 0/admin,{"sid":"z0E-mP5pd2LZFCy2AAAH"}
+2025-06-17 16:25:08,601 - engineio.server - INFO - [socket.py:90] - 3H9ZhtJ1kD_ZxVLTAAAG: Received request to upgrade to websocket
+2025-06-17 16:25:08,779 - engineio.server - INFO - [socket.py:219] - 3H9ZhtJ1kD_ZxVLTAAAG: Upgrade to websocket successful
+2025-06-17 16:25:08,789 - engineio.server - INFO - [socket.py:39] - 3H9ZhtJ1kD_ZxVLTAAAG: Received packet MESSAGE data 2/admin,["get_user_stats"]
+2025-06-17 16:25:08,790 - socketio.server - INFO - [server.py:576] - received event "get_user_stats" from z0E-mP5pd2LZFCy2AAAH [/admin]
+2025-06-17 16:25:09,888 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:25:09,896 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:25:10,085 - __main__ - INFO - [app.py:458] - Request started: GET /admin/users
+2025-06-17 16:25:10,101 - __main__ - INFO - [app.py:467] - Request completed: GET /admin/users - Status: 200 - Duration: 0.02s
+2025-06-17 16:25:12,292 - __main__ - INFO - [app.py:458] - Request started: GET /admin/dashboard
+2025-06-17 16:25:12,296 - __main__ - INFO - [app.py:467] - Request completed: GET /admin/dashboard - Status: 200 - Duration: 0.00s
+2025-06-17 16:25:12,581 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet OPEN data {'sid': 'ASLTyXGM8PWGhGmSAAAI', 'upgrades': ['websocket'], 'pingTimeout': 10000, 'pingInterval': 5000, 'maxPayload': 1000000}
+2025-06-17 16:25:12,698 - engineio.server - INFO - [socket.py:39] - ASLTyXGM8PWGhGmSAAAI: Received packet MESSAGE data 0/admin,
+2025-06-17 16:25:12,700 - socketio.server - INFO - [server.py:164] - emitting event "connected" to sgTfRPcNyLzR-HdVAAAJ [/admin]
+2025-06-17 16:25:12,702 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet MESSAGE data 2/admin,["connected",{"data":"Connected to admin panel"}]
+2025-06-17 16:25:12,704 - socketio.server - INFO - [server.py:164] - emitting event "stats_update" to sgTfRPcNyLzR-HdVAAAJ [/admin]
+2025-06-17 16:25:12,706 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet MESSAGE data 2/admin,["stats_update",{"total_users":80,"active_users":0,"waiting_users":0,"active_chats":0,"gender_stats":{"M":48,"F":8,"O":1},"hourly_activity":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]
+2025-06-17 16:25:12,708 - socketio.server - INFO - [server.py:164] - emitting event "active_chats" to sgTfRPcNyLzR-HdVAAAJ [/admin]
+2025-06-17 16:25:12,708 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet MESSAGE data 2/admin,["active_chats",[]]
+2025-06-17 16:25:12,708 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet MESSAGE data 0/admin,{"sid":"sgTfRPcNyLzR-HdVAAAJ"}
+2025-06-17 16:25:12,712 - engineio.server - INFO - [socket.py:90] - ASLTyXGM8PWGhGmSAAAI: Received request to upgrade to websocket
+2025-06-17 16:25:12,833 - engineio.server - INFO - [socket.py:219] - ASLTyXGM8PWGhGmSAAAI: Upgrade to websocket successful
+2025-06-17 16:25:13,106 - bot.utils - ERROR - [utils.py:237] - Request error on attempt 2 for getUpdates: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C1FA050>: Failed to establish a new connection: [Errno 11002] Lookup timed out'))
+2025-06-17 16:25:14,906 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:25:14,907 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:25:17,592 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet PING data None
+2025-06-17 16:25:17,592 - engineio.server - INFO - [socket.py:39] - ASLTyXGM8PWGhGmSAAAI: Received packet PONG data 
+2025-06-17 16:25:19,922 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:25:19,947 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:25:22,609 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet PING data None
+2025-06-17 16:25:22,613 - engineio.server - INFO - [socket.py:39] - ASLTyXGM8PWGhGmSAAAI: Received packet PONG data 
+2025-06-17 16:25:24,950 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:25:24,952 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:25:27,623 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet PING data None
+2025-06-17 16:25:27,623 - engineio.server - INFO - [socket.py:39] - ASLTyXGM8PWGhGmSAAAI: Received packet PONG data 
+2025-06-17 16:25:29,968 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:25:29,971 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:25:32,632 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet PING data None
+2025-06-17 16:25:32,635 - engineio.server - INFO - [socket.py:39] - ASLTyXGM8PWGhGmSAAAI: Received packet PONG data 
+2025-06-17 16:25:33,426 - urllib3.connectionpool - WARNING - [connectionpool.py:824] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027F2C229050>: Failed to establish a new connection: [Errno 11002] Lookup timed out')': /bot7593677131:AAE_wsA7LxdEDMRZDq0A-JiE2JlDJ9YXA1g/getUpdates
+2025-06-17 16:25:34,979 - engineio.server - INFO - [socket.py:78] - Z6cgO3WNaDRSleIjAAAA: Sending packet PING data None
+2025-06-17 16:25:34,981 - engineio.server - INFO - [socket.py:39] - Z6cgO3WNaDRSleIjAAAA: Received packet PONG data 
+2025-06-17 16:25:37,634 - engineio.server - INFO - [socket.py:78] - ASLTyXGM8PWGhGmSAAAI: Sending packet PING data None
