@@ -39,8 +39,13 @@ app = Flask(__name__)
 app.config.from_object(Config)
 Config.init_app(app)
 
-# Initialize socketio with app
-socketio.init_app(app)
+# Initialize socketio with long-polling for PythonAnywhere compatibility
+socketio = SocketIO(app, 
+                   async_mode='threading',
+                   cors_allowed_origins='*',
+                   transport=['polling'],
+                   ping_timeout=10,
+                   ping_interval=5)
 
 # Initialize Flask-Login
 login_manager = LoginManager()
@@ -434,4 +439,4 @@ if __name__ == '__main__':
         application = app
     else:
         # Running locally - use socketio
-        socketio.run(app, host='0.0.0.0', port=5001, debug=False) 
+        socketio.run(app, host='0.0.0.0', port=5000, debug=False) 

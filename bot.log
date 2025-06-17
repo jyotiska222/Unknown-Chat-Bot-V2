@@ -918,3 +918,101 @@ NameError: name 'emit' is not defined
 2025-06-15 13:02:27,856 - __main__ - INFO - Starting polling thread...
 2025-06-15 13:03:36,212 - __main__ - INFO - Starting polling thread...
 2025-06-15 13:25:15,731 - __main__ - INFO - Starting polling thread...
+2025-06-17 14:18:43,303 - __main__ - INFO - Starting polling thread...
+2025-06-17 14:18:43,327 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-17 14:18:43,328 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 14:18:46,733 - bot.utils - ERROR - Telegram API error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:46,734 - bot.utils - ERROR - Unexpected error on attempt 1 for sendMessage: Forbidden: bot was blocked by the user
+2025-06-17 14:18:46,734 - __main__ - ERROR - Telegram API error for user 1107023782: Unexpected error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,135 - bot.utils - ERROR - Telegram API error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,136 - bot.utils - ERROR - Unexpected error on attempt 1 for sendMessage: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,136 - __main__ - ERROR - Update handling error: Unexpected error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,187 - bot.handlers - INFO - Chat command - User 1107023782 data: {'username': '', 'status': 'new', 'joined_at': 1750150125.2113893, 'partner': None, 'gender': None, 'interest': None, 'banned': False, 'last_active': 1750150127.1691148}
+2025-06-17 14:18:47,188 - bot.handlers - INFO - User 1107023782 profile incomplete: gender=None, interest=None
+2025-06-17 14:18:47,551 - bot.utils - ERROR - Telegram API error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,551 - bot.utils - ERROR - Unexpected error on attempt 1 for sendMessage: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,552 - __main__ - ERROR - Telegram API error for user 1107023782: Unexpected error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,934 - bot.utils - ERROR - Telegram API error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,935 - bot.utils - ERROR - Unexpected error on attempt 1 for sendMessage: Forbidden: bot was blocked by the user
+2025-06-17 14:18:47,935 - __main__ - ERROR - Update handling error: Unexpected error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:48,416 - bot.utils - ERROR - Telegram API error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:48,416 - bot.utils - ERROR - Unexpected error on attempt 1 for sendMessage: Forbidden: bot was blocked by the user
+2025-06-17 14:18:48,417 - __main__ - ERROR - Telegram API error for user 1107023782: Unexpected error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:48,781 - bot.utils - ERROR - Telegram API error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:48,782 - bot.utils - ERROR - Unexpected error on attempt 1 for sendMessage: Forbidden: bot was blocked by the user
+2025-06-17 14:18:48,783 - __main__ - ERROR - Update handling error: Unexpected error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:48,826 - bot.utils - WARNING - Rate limit exceeded for user 1107023782
+2025-06-17 14:18:48,847 - bot.handlers - INFO - Chat command - User 7988565300 data: {'username': 'Abbaaaz9', 'partner': None, 'connect_time': 1747848990.7057831, 'gender': 'M', 'interest': 'F', 'last_active': 1750150128.8282907}
+2025-06-17 14:18:48,868 - bot.handlers - INFO - Finding partner for user 7988565300
+2025-06-17 14:18:48,869 - bot.handlers - INFO - Available waiting users: {'7988565300': {'username': 'Abbaaaz9', 'partner': None, 'connect_time': 1747848990.7057831, 'gender': 'M', 'interest': 'F', 'last_active': 1750150128.8282907, 'status': 'waiting', 'wait_start': 1750150128.8472936}}
+2025-06-17 14:18:49,315 - bot.handlers - INFO - Chat command - User 7988565300 data: {'username': 'Abbaaaz9', 'partner': None, 'connect_time': 1747848990.7057831, 'gender': 'M', 'interest': 'F', 'last_active': 1750150129.2953203, 'status': 'waiting', 'wait_start': 1750150128.8472936}
+2025-06-17 14:18:49,318 - bot.handlers - INFO - Finding partner for user 7988565300
+2025-06-17 14:18:49,318 - bot.handlers - INFO - Available waiting users: {'7988565300': {'username': 'Abbaaaz9', 'partner': None, 'connect_time': 1747848990.7057831, 'gender': 'M', 'interest': 'F', 'last_active': 1750150129.2953203, 'status': 'waiting', 'wait_start': 1750150128.8472936}}
+2025-06-17 14:18:50,094 - bot.utils - ERROR - Telegram API error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:50,095 - bot.utils - ERROR - Unexpected error on attempt 1 for sendMessage: Forbidden: bot was blocked by the user
+2025-06-17 14:18:50,095 - __main__ - ERROR - Telegram API error for user 7849740883: Unexpected error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:50,520 - bot.utils - ERROR - Telegram API error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:50,521 - bot.utils - ERROR - Unexpected error on attempt 1 for sendMessage: Forbidden: bot was blocked by the user
+2025-06-17 14:18:50,521 - __main__ - ERROR - Update handling error: Unexpected error: Forbidden: bot was blocked by the user
+2025-06-17 14:18:51,482 - bot.handlers - INFO - Chat command - User 5648773820 data: {'username': '', 'status': 'new', 'joined_at': 1750150130.5487123, 'partner': None, 'gender': None, 'interest': None, 'banned': False, 'last_active': 1750150131.466031}
+2025-06-17 14:18:51,482 - bot.handlers - INFO - User 5648773820 profile incomplete: gender=None, interest=None
+2025-06-17 14:18:53,199 - bot.handlers - INFO - Chat command - User 1212235104 data: {'username': 'Red_6006', 'status': 'new', 'joined_at': 1750150132.7624927, 'partner': None, 'gender': None, 'interest': None, 'banned': False, 'last_active': 1750150133.170496}
+2025-06-17 14:18:53,199 - bot.handlers - INFO - User 1212235104 profile incomplete: gender=None, interest=None
+2025-06-17 14:19:29,691 - __main__ - INFO - Starting polling thread...
+2025-06-17 14:19:29,710 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-17 14:19:29,710 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-17 14:19:49,859 - bot.handlers - INFO - Gender selection - User 1212235104 before: {'username': 'Red_6006', 'status': 'new', 'joined_at': 1750150171.0422919, 'partner': None, 'gender': None, 'interest': None, 'banned': False}
+2025-06-17 14:19:49,861 - bot.handlers - INFO - Gender selection - User 1212235104 after: {'username': 'Red_6006', 'status': 'gender_set', 'joined_at': 1750150171.0422919, 'partner': None, 'gender': 'M', 'interest': None, 'banned': False}
+2025-06-17 14:19:52,567 - bot.handlers - INFO - Interest selection - User 1212235104 before: {'username': 'Red_6006', 'status': 'gender_set', 'joined_at': 1750150171.0422919, 'partner': None, 'gender': 'M', 'interest': None, 'banned': False}
+2025-06-17 14:19:52,569 - bot.handlers - INFO - Interest selection - User 1212235104 after: {'username': 'Red_6006', 'status': 'ready', 'joined_at': 1750150171.0422919, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False}
+2025-06-17 14:19:54,946 - bot.handlers - INFO - Chat command - User 1212235104 data: {'username': 'Red_6006', 'status': 'ready', 'joined_at': 1750150171.0422919, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750150194.9314816}
+2025-06-17 14:19:54,962 - bot.handlers - INFO - Finding partner for user 1212235104
+2025-06-17 14:19:54,962 - bot.handlers - INFO - Available waiting users: {'1212235104': {'username': 'Red_6006', 'status': 'waiting', 'joined_at': 1750150171.0422919, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750150194.9314816, 'wait_start': 1750150194.9474742}}
+2025-06-17 14:20:08,390 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:08] "GET / HTTP/1.1" 200 -
+2025-06-17 14:20:09,242 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-17 14:20:09,851 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-17 14:20:18,794 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:18] "GET /login HTTP/1.1" 200 -
+2025-06-17 14:20:21,428 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:21] "POST /login HTTP/1.1" 200 -
+2025-06-17 14:20:37,262 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-17 14:20:37,297 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:37] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-06-17 14:20:37,778 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:37] "GET /socket.io/?EIO=4&transport=polling&t=PTz5Kv9 HTTP/1.1" 200 -
+2025-06-17 14:20:37,870 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:37] "POST /socket.io/?EIO=4&transport=polling&t=PTz5Kwc&sid=cGRAXh0AnSbJwPR4AAAA HTTP/1.1" 200 -
+2025-06-17 14:20:37,878 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:37] "GET /socket.io/?EIO=4&transport=polling&t=PTz5Kwi&sid=cGRAXh0AnSbJwPR4AAAA HTTP/1.1" 200 -
+2025-06-17 14:20:37,891 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:37] "GET /socket.io/?EIO=4&transport=polling&t=PTz5Kwx&sid=cGRAXh0AnSbJwPR4AAAA HTTP/1.1" 200 -
+2025-06-17 14:20:41,472 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:41] "GET /socket.io/?EIO=4&transport=websocket&sid=cGRAXh0AnSbJwPR4AAAA HTTP/1.1" 200 -
+2025-06-17 14:20:41,514 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:41] "GET /admin/monitoring HTTP/1.1" 200 -
+2025-06-17 14:20:41,813 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:41] "GET /socket.io/?EIO=4&transport=polling&t=PTz5LuF HTTP/1.1" 200 -
+2025-06-17 14:20:41,851 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:41] "POST /socket.io/?EIO=4&transport=polling&t=PTz5Lub&sid=jU3E4IoCOeyEwTvoAAAC HTTP/1.1" 200 -
+2025-06-17 14:20:41,852 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:41] "GET /socket.io/?EIO=4&transport=polling&t=PTz5Luc&sid=jU3E4IoCOeyEwTvoAAAC HTTP/1.1" 200 -
+2025-06-17 14:20:46,589 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:46] "GET /socket.io/?EIO=4&transport=websocket&sid=jU3E4IoCOeyEwTvoAAAC HTTP/1.1" 200 -
+2025-06-17 14:20:46,648 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:46] "GET /admin/broadcast HTTP/1.1" 200 -
+2025-06-17 14:20:47,852 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:47] "GET /admin/chat-history HTTP/1.1" 200 -
+2025-06-17 14:20:48,174 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:48] "[33mGET /api/chat-history?page=1 HTTP/1.1[0m" 404 -
+2025-06-17 14:20:49,295 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:49] "GET /admin/monitoring HTTP/1.1" 200 -
+2025-06-17 14:20:49,556 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:49] "GET /socket.io/?EIO=4&transport=polling&t=PTz5NnD HTTP/1.1" 200 -
+2025-06-17 14:20:49,592 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:49] "POST /socket.io/?EIO=4&transport=polling&t=PTz5Nnc&sid=ptnb8aOtbi7S_OugAAAE HTTP/1.1" 200 -
+2025-06-17 14:20:49,595 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:49] "GET /socket.io/?EIO=4&transport=polling&t=PTz5Nnc.0&sid=ptnb8aOtbi7S_OugAAAE HTTP/1.1" 200 -
+2025-06-17 14:20:49,651 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:49] "GET /socket.io/?EIO=4&transport=polling&t=PTz5NoC&sid=ptnb8aOtbi7S_OugAAAE HTTP/1.1" 200 -
+2025-06-17 14:20:50,703 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:50] "GET /socket.io/?EIO=4&transport=websocket&sid=ptnb8aOtbi7S_OugAAAE HTTP/1.1" 200 -
+2025-06-17 14:20:50,759 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:20:50] "GET /admin/users HTTP/1.1" 200 -
+2025-06-17 14:21:13,803 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:13] "GET /admin/broadcast HTTP/1.1" 200 -
+2025-06-17 14:21:15,286 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:15] "GET /admin/chat-history HTTP/1.1" 200 -
+2025-06-17 14:21:15,566 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:15] "[33mGET /api/chat-history?page=1 HTTP/1.1[0m" 404 -
+2025-06-17 14:21:17,924 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:17] "GET /admin/monitoring HTTP/1.1" 200 -
+2025-06-17 14:21:18,193 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:18] "GET /socket.io/?EIO=4&transport=polling&t=PTz5Umd HTTP/1.1" 200 -
+2025-06-17 14:21:18,220 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:18] "GET /socket.io/?EIO=4&transport=polling&t=PTz5Um_&sid=WIiKYJy_nkBNICv5AAAG HTTP/1.1" 200 -
+2025-06-17 14:21:18,223 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:18] "POST /socket.io/?EIO=4&transport=polling&t=PTz5Um-&sid=WIiKYJy_nkBNICv5AAAG HTTP/1.1" 200 -
+2025-06-17 14:21:18,267 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:18] "GET /socket.io/?EIO=4&transport=polling&t=PTz5UnT&sid=WIiKYJy_nkBNICv5AAAG HTTP/1.1" 200 -
+2025-06-17 14:21:19,633 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:19] "GET /socket.io/?EIO=4&transport=websocket&sid=WIiKYJy_nkBNICv5AAAG HTTP/1.1" 200 -
+2025-06-17 14:21:19,665 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:19] "GET /admin/users HTTP/1.1" 200 -
+2025-06-17 14:21:27,128 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:27] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-06-17 14:21:27,428 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:27] "GET /socket.io/?EIO=4&transport=polling&t=PTz5X0w HTTP/1.1" 200 -
+2025-06-17 14:21:27,503 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:27] "POST /socket.io/?EIO=4&transport=polling&t=PTz5X22&sid=9NO_h27HV6KUMZg5AAAI HTTP/1.1" 200 -
+2025-06-17 14:21:27,504 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:27] "GET /socket.io/?EIO=4&transport=polling&t=PTz5X23&sid=9NO_h27HV6KUMZg5AAAI HTTP/1.1" 200 -
+2025-06-17 14:21:27,540 - werkzeug - INFO - 192.168.31.156 - - [17/Jun/2025 14:21:27] "GET /socket.io/?EIO=4&transport=polling&t=PTz5X2j&sid=9NO_h27HV6KUMZg5AAAI HTTP/1.1" 200 -
