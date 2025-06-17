@@ -22,7 +22,6 @@ from bot.handlers import (
 )
 from bot.utils import TelegramAPI, UserManager, ChatManager, TelegramError
 from admin.routes import admin
-from bot.shared import socketio
 from error_handlers import init_error_handlers, APIError
 
 # Configure logging with more detailed format
@@ -44,13 +43,17 @@ Config.init_app(app)
 # Initialize error handlers
 init_error_handlers(app)
 
-# Initialize socketio with the Flask app
-socketio.init_app(app,
-                async_mode='threading',
-                cors_allowed_origins='*',
-                transport=['polling'],
-                ping_timeout=10,
-                ping_interval=5)
+# Initialize SocketIO
+socketio = SocketIO(
+    app,
+    async_mode='threading',
+    cors_allowed_origins='*',
+    transport=['polling'],
+    ping_timeout=10,
+    ping_interval=5,
+    logger=True,
+    engineio_logger=True
+)
 
 # Initialize Flask-Login
 login_manager = LoginManager()
