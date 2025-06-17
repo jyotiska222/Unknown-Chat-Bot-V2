@@ -5,6 +5,7 @@ import os
 import time
 from datetime import datetime
 import logging
+from logging.handlers import RotatingFileHandler
 from werkzeug.security import generate_password_hash, check_password_hash
 import threading
 import traceback
@@ -24,16 +25,28 @@ from bot.utils import TelegramAPI, UserManager, ChatManager, TelegramError
 from admin.routes import admin
 from error_handlers import init_error_handlers, APIError
 
-# Configure logging with more detailed format
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s',
-    handlers=[
-        logging.FileHandler('bot.log'),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
+# Ensure log directory exists
+log_dir = 'logs'
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+
+# Configure logging with more detailed format and rotating file handler
+log_file = os.path.join(log_dir, 'bot.log')
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s')
+
+# Set up file handler with rotation
+file_handler = RotatingFileHandler(log_file, maxBytes=1024*1024, backupCount=5)
+file_handler.setFormatter(formatter)
+
+# Set up stream handler
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+
+# Configure root logger
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -124,38 +137,10 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-def cleanup_inactive_users():
-    """Cleanup inactive users and dead chats"""
-    while True:
-        try:
-            current_time = time.time()
-            users = user_manager.get_all_users()
-            
-            for user_id, user_data in users.items():
-                # Skip if user is active
-                if current_time - user_data.get('last_active', 0) < Config.INACTIVE_TIMEOUT:
-                    continue
-                
-                # Reset waiting status if user is inactive
-                if user_data.get('status') == 'waiting':
-                    user_data['status'] = 'ready'
-                    user_manager.save_user(user_id, user_data)
-                    logger.info(f"Reset inactive waiting user {user_id}")
-                
-                # End dead chats
-                if user_data.get('status') == 'chatting':
-                    partner_id = user_data.get('partner')
-                    if partner_id:
-                        partner = user_manager.get_user(partner_id)
-                        if partner and current_time - partner.get('last_active', 0) > Config.INACTIVE_TIMEOUT:
-                            handle_leave_command(user_id)
-                            logger.info(f"Ended dead chat between {user_id} and {partner_id}")
-            
-        except Exception as e:
-            logger.error(f"Cleanup error: {e}")
-            traceback.print_exc()
-        
-        time.sleep(Config.CLEANUP_INTERVAL)
+def update_user_activity(user_id):
+    """Update the last activity timestamp for a user"""
+    # This function is now a no-op since we're not tracking activity
+    pass
 
 def is_duplicate_message(update):
     """Check if message is a duplicate"""
@@ -181,9 +166,6 @@ def handle_update(update):
             # Check if message is a duplicate
             if is_duplicate_message(update):
                 return
-
-            # Update user's last active time
-            user_manager.update_last_active(user_id)
             
             if 'text' in message:
                 text = message['text']
@@ -519,10 +501,6 @@ def setup_webhook():
         logger.error(f"Error setting up webhook: {e}")
 
 if __name__ == '__main__':
-    # Start cleanup thread
-    cleanup_thread = threading.Thread(target=cleanup_inactive_users, daemon=True)
-    cleanup_thread.start()
-    
     # Set up webhook if running on PythonAnywhere
     if 'pythonanywhere' in gethostname():
         setup_webhook()

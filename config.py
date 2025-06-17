@@ -42,10 +42,6 @@ class Config:
     MAX_RETRIES = 5
     RETRY_DELAY = 5  # seconds
     
-    # Cleanup settings
-    CLEANUP_INTERVAL = 300  # 5 minutes
-    INACTIVE_TIMEOUT = 1800  # 30 minutes
-    
     # Network settings
     POLLING_TIMEOUT = 30  # seconds for long polling
     CONNECT_TIMEOUT = 20  # seconds for connection establishment
