@@ -951,3 +951,1711 @@ NameError: name 'request' is not defined
 2025-06-18 12:31:01,123 - bot.handlers - INFO - [handlers.py:116] - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158066.5010402, 'wait_start': 1750229256.309824, 'chat_start': 1750153792.4302967, 'connect_time': 1748201129.0450668}
 2025-06-18 12:31:01,125 - bot.handlers - INFO - [handlers.py:102] - Finding partner for user 6261300717
 2025-06-18 12:31:01,126 - bot.handlers - INFO - [handlers.py:103] - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158066.5010402, 'wait_start': 1750229256.309824, 'chat_start': 1750153792.4302967, 'connect_time': 1748201129.0450668}}
+2025-06-18 12:55:43,988 - root - INFO - [app.py:203] - Starting polling thread...
+2025-06-18 12:55:44,010 - werkzeug - INFO - [_internal.py:187] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-18 12:55:44,011 - werkzeug - INFO - [_internal.py:187] - [33mPress CTRL+C to quit[0m
+2025-06-18 12:55:45,275 - bot.handlers - INFO - [handlers.py:116] - Chat command - User 6261300717 data: {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158066.5010402, 'wait_start': 1750229256.309824, 'chat_start': 1750153792.4302967, 'connect_time': 1748201129.0450668}
+2025-06-18 12:55:45,277 - bot.handlers - INFO - [handlers.py:102] - Finding partner for user 6261300717
+2025-06-18 12:55:45,277 - bot.handlers - INFO - [handlers.py:103] - Available waiting users: {'6261300717': {'username': 'jbiswas03', 'status': 'waiting', 'joined_at': 1749957772.330016, 'partner': None, 'gender': 'M', 'interest': 'F', 'banned': False, 'last_active': 1750158066.5010402, 'wait_start': 1750229256.309824, 'chat_start': 1750153792.4302967, 'connect_time': 1748201129.0450668}}
+2025-06-18 12:56:04,352 - root - INFO - [app.py:441] - Request started: GET /
+2025-06-18 12:56:04,369 - root - INFO - [app.py:450] - Request completed: GET / - Status: 200 - Duration: 0.01s
+2025-06-18 12:56:04,370 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:56:04] "GET / HTTP/1.1" 200 -
+2025-06-18 12:56:05,171 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:56:05,173 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:56:05,188 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:56:05,194 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:56:05,196 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:56:05] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:56:05,214 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:56:05,704 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:56:05,705 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:56:05,713 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:56:05,720 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:56:05,722 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:56:05] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:56:05,746 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:56:14,190 - root - INFO - [app.py:441] - Request started: GET /
+2025-06-18 12:56:14,193 - root - INFO - [app.py:450] - Request completed: GET / - Status: 200 - Duration: 0.00s
+2025-06-18 12:56:14,194 - werkzeug - INFO - [_internal.py:187] - 127.0.0.1 - - [18/Jun/2025 12:56:14] "GET / HTTP/1.1" 200 -
+2025-06-18 12:56:14,821 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:56:14,822 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:56:14,830 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:56:14,835 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:56:14,837 - werkzeug - INFO - [_internal.py:187] - 127.0.0.1 - - [18/Jun/2025 12:56:14] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:56:14,850 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:56:15,266 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:56:15,267 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:56:15,272 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:56:15,280 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:56:15,281 - werkzeug - INFO - [_internal.py:187] - 127.0.0.1 - - [18/Jun/2025 12:56:15] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:56:15,294 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:57:49,070 - root - INFO - [app.py:203] - Starting polling thread...
+2025-06-18 12:57:49,091 - werkzeug - INFO - [_internal.py:187] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.156:5000
+2025-06-18 12:57:49,092 - werkzeug - INFO - [_internal.py:187] - [33mPress CTRL+C to quit[0m
+2025-06-18 12:57:56,665 - root - INFO - [app.py:441] - Request started: GET /
+2025-06-18 12:57:56,685 - root - INFO - [app.py:450] - Request completed: GET / - Status: 200 - Duration: 0.02s
+2025-06-18 12:57:56,686 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:57:56] "GET / HTTP/1.1" 200 -
+2025-06-18 12:57:57,405 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:57:57,406 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:57:57,419 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:57:57,423 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:57:57,425 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:57:57] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:57:57,441 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:57:57,834 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:57:57,835 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:57:57,843 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:57:57,849 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:57:57,851 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:57:57] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:57:57,876 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:06,044 - root - INFO - [app.py:441] - Request started: GET /login
+2025-06-18 12:58:06,046 - root - INFO - [app.py:450] - Request completed: GET /login - Status: 302 - Duration: 0.00s
+2025-06-18 12:58:06,048 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:06] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-18 12:58:06,063 - root - INFO - [app.py:441] - Request started: GET /admin/dashboard
+2025-06-18 12:58:06,088 - root - INFO - [app.py:450] - Request completed: GET /admin/dashboard - Status: 200 - Duration: 0.03s
+2025-06-18 12:58:06,090 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:06] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-06-18 12:58:06,401 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:06] "GET /socket.io/?EIO=4&transport=polling&t=PU1y1pv HTTP/1.1" 200 -
+2025-06-18 12:58:06,481 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:06] "POST /socket.io/?EIO=4&transport=polling&t=PU1y1r6&sid=xEsiz7mzEltpl4G2AAAA HTTP/1.1" 200 -
+2025-06-18 12:58:06,485 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:06] "GET /socket.io/?EIO=4&transport=polling&t=PU1y1r9&sid=xEsiz7mzEltpl4G2AAAA HTTP/1.1" 200 -
+2025-06-18 12:58:06,520 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:06] "GET /socket.io/?EIO=4&transport=polling&t=PU1y1rn&sid=xEsiz7mzEltpl4G2AAAA HTTP/1.1" 200 -
+2025-06-18 12:58:06,861 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:58:06,862 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:06,869 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:58:06,875 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:58:06,877 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:58:06,886 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:10,029 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:10] "GET /socket.io/?EIO=4&transport=websocket&sid=xEsiz7mzEltpl4G2AAAA HTTP/1.1" 200 -
+2025-06-18 12:58:10,056 - root - INFO - [app.py:441] - Request started: GET /admin/dashboard
+2025-06-18 12:58:10,058 - root - INFO - [app.py:450] - Request completed: GET /admin/dashboard - Status: 200 - Duration: 0.00s
+2025-06-18 12:58:10,059 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:10] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-06-18 12:58:10,282 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:10] "GET /socket.io/?EIO=4&transport=polling&t=PU1y2mZ HTTP/1.1" 200 -
+2025-06-18 12:58:10,352 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:10] "GET /socket.io/?EIO=4&transport=polling&t=PU1y2na&sid=eivcXi4IyzjoKZvYAAAC HTTP/1.1" 200 -
+2025-06-18 12:58:10,353 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:10] "POST /socket.io/?EIO=4&transport=polling&t=PU1y2nZ&sid=eivcXi4IyzjoKZvYAAAC HTTP/1.1" 200 -
+2025-06-18 12:58:10,407 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:10] "GET /socket.io/?EIO=4&transport=polling&t=PU1y2n_&sid=eivcXi4IyzjoKZvYAAAC HTTP/1.1" 200 -
+2025-06-18 12:58:10,465 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:58:10,465 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:10,472 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:58:10,478 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:58:10,480 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:10] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:58:10,501 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:11,296 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:11] "GET /socket.io/?EIO=4&transport=websocket&sid=eivcXi4IyzjoKZvYAAAC HTTP/1.1" 200 -
+2025-06-18 12:58:11,325 - root - INFO - [app.py:441] - Request started: GET /admin/users
+2025-06-18 12:58:11,349 - root - INFO - [app.py:450] - Request completed: GET /admin/users - Status: 200 - Duration: 0.02s
+2025-06-18 12:58:11,349 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:11] "GET /admin/users HTTP/1.1" 200 -
+2025-06-18 12:58:11,744 - root - INFO - [app.py:441] - Request started: GET /admin/chat-history
+2025-06-18 12:58:11,752 - root - INFO - [app.py:450] - Request completed: GET /admin/chat-history - Status: 200 - Duration: 0.01s
+2025-06-18 12:58:11,753 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:11] "GET /admin/chat-history HTTP/1.1" 200 -
+2025-06-18 12:58:11,769 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:58:11,770 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:11,776 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:58:11,780 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:58:11,781 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:11] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:58:11,808 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:12,288 - root - INFO - [app.py:441] - Request started: GET /api/chat-history
+2025-06-18 12:58:12,289 - app - ERROR - [app.py:1414] - Exception on /api/chat-history [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:12,291 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:58:12,295 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:58:12,295 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:12,302 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:58:12,305 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:58:12,307 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:12] "[35m[1mGET /api/chat-history?page=1 HTTP/1.1[0m" 500 -
+2025-06-18 12:58:12,312 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:58:12,313 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:12] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:58:12,322 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:12,330 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:12,925 - root - INFO - [app.py:441] - Request started: GET /admin/broadcast
+2025-06-18 12:58:12,939 - root - INFO - [app.py:450] - Request completed: GET /admin/broadcast - Status: 200 - Duration: 0.01s
+2025-06-18 12:58:12,941 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:12] "GET /admin/broadcast HTTP/1.1" 200 -
+2025-06-18 12:58:13,344 - root - INFO - [app.py:441] - Request started: GET /favicon.ico
+2025-06-18 12:58:13,344 - app - ERROR - [app.py:1414] - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+2025-06-18 12:58:13,350 - error_handlers - ERROR - [error_handlers.py:48] - Internal Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-06-18 12:58:13,356 - error_handlers - ERROR - [error_handlers.py:49] - Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^
+NameError: name 'request' is not defined
+
+2025-06-18 12:58:13,358 - werkzeug - INFO - [_internal.py:187] - 192.168.31.156 - - [18/Jun/2025 12:58:13] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-06-18 12:58:13,379 - werkzeug - ERROR - [_internal.py:187] - Error on request:
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 37, in not_found_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\werkzeug\serving.py", line 325, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask_socketio\__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\engineio\middleware.py", line 74, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\.venv\Lib\site-packages\flask\app.py", line 1399, in handle_exception
+    server_error = self.ensure_sync(handler)(server_error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Development\unknown_chat_bot v02\telegram_bot\error_handlers.py", line 50, in internal_error
+    if request.path.startswith('/api/'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'request' is not defined
