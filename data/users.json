@@ -1,14 +1,14 @@
 {
   "6261300717": {
     "username": "jbiswas03",
-    "status": "ready",
+    "status": "waiting",
     "joined_at": 1749957772.330016,
     "partner": null,
     "gender": "M",
     "interest": "F",
     "banned": false,
     "last_active": 1750158066.5010402,
-    "wait_start": 1750153782.4772236,
+    "wait_start": 1750229256.309824,
     "chat_start": 1750153792.4302967,
     "connect_time": 1748201129.0450668
   },
@@ -34,5 +34,41 @@
     "wait_start": 1749972244.173857,
     "chat_start": 1749972251.300068,
     "connect_time": 1747684569.427232
+  },
+  "918355569": {
+    "username": "Ssssb999",
+    "status": "new",
+    "joined_at": 1750228523.025673,
+    "partner": null,
+    "gender": null,
+    "interest": null,
+    "banned": false
+  },
+  "6654075765": {
+    "username": "Major1m1",
+    "status": "new",
+    "joined_at": 1750228524.9257162,
+    "partner": null,
+    "gender": null,
+    "interest": null,
+    "banned": false
+  },
+  "6519443888": {
+    "username": "raoabujar01",
+    "status": "new",
+    "joined_at": 1750228526.8249218,
+    "partner": null,
+    "gender": null,
+    "interest": null,
+    "banned": false
+  },
+  "7979001635": {
+    "username": "abdullahkhalid5",
+    "status": "new",
+    "joined_at": 1750228528.332703,
+    "partner": null,
+    "gender": null,
+    "interest": null,
+    "banned": false
   }
 }
